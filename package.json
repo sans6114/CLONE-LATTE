@@ -11,9 +11,14 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.8.2",
+    "@astrojs/netlify": "^5.4.0",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.12.2",
+    "firebase": "^10.12.4",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.10"
   }
 }
