@@ -1,9 +1,48 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro"
+import { firebase } from "@/firebase/config";
+import MainLayout from "@/layouts/MainLayout.astro";
+
+const user = firebase.auth.currentUser;
+
+if (user === null) {
+  return Astro.redirect("/login");
+}
+const {
+  displayName = "No display name",
+  email,
+  emailVerified,
+  photoURL,
+} = user;
 ---
 
-<MainLayout title="Home">
-	<h1 class="text-3xl">
-		Hola protegida
-	</h1>
+<MainLayout title="Protected">
+  <h1 class="text-3xl">Hola protected</h1>
+  <div class="card card-side bg-base-100 shadow-xl">
+    <figure>
+      {
+        photoURL ? (
+          <img src={photoURL} alt={`avatar de ${displayName}`} />
+        ) : (
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+            alt="Movie"
+          />
+        )
+      }
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">{email}</h2>
+      <p>
+		{
+emailVerified ? (
+'Email verified'
+) : ('Email no verified')
+		}
+		</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Watch</button>
+      </div>
+    </div>
+  </div>
 </MainLayout>
+<!-- {displayName!.substring(0, 2)} -->

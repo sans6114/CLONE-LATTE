@@ -3,17 +3,32 @@ import { Image } from "astro:assets";
 import atardecer from '@/images/auth/atardecer.jpg';
 
 const alt = 'Imagen de atardecer'
+
+
+interface Props {
+  title?: string;
+}
+const { title } = Astro.props;
 ---
-
-
-<!-- component -->
- <div class="bg-gray-100 flex justify-center items-center h-screen">
-    <!-- Left: Image -->
-    <div class="w-1/2 h-screen hidden lg:block">
-        <Image class="object-cover w-full h-full" src={atardecer} alt={alt}  />
-    </div>
-    <!-- Right: Login Form -->
-    <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
-      <slot/>
-    </div>
-  </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- component -->
+     <div class="bg-gray-100 flex justify-center items-center h-screen">
+        <!-- Left: Image -->
+        <div class="w-1/2 h-screen hidden lg:block">
+            <Image class="object-cover w-full h-full" src={atardecer} alt={alt}  />
+        </div>
+        <!-- Right: Login Form -->
+        <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
+          <slot/>
+        </div>
+      </div>
+  </body>
+</html>
