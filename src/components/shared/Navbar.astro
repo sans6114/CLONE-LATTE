@@ -10,9 +10,10 @@ let links = [
 
 const user = firebase.auth.currentUser;
 
-console.log(links)
-const currentPath = Astro.url.pathname;
-console.log(currentPath);
+const {isLoggedIn} = Astro.locals
+if(isLoggedIn){
+  links.splice(2,2)
+}
 ---
 
 
@@ -39,31 +40,10 @@ console.log(currentPath);
         <li
           class="text-center"
         >
-          <!--
-        {
-            links.map(({href, text}) => (
-              <a
-                href={href}
-                class:list={
-                  [
-                    'block py-2 px-3',
-                    {'border-b-2 border-blue-500 text-blue-500': currentPath === href}
-                  ]
-
-                }
-                aria-current="page"
-              >
-                {text}
-              </a>
-            ))
-          }
-        
-        -->
-
           {
             links.map(({ href, text }) => (
-              <div>
-                <a href={href} class="block py-2 px-3 w-full" aria-current="page">
+              <div class="btn btn-primary btn-outline my-2">
+                <a href={href} class="block py-2 px-3 w-full text-start" aria-current="page">
                   {text}
                 </a>
               </div>

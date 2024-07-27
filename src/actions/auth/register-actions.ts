@@ -2,7 +2,11 @@ import {
   defineAction,
   z,
 } from 'astro:actions';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  updateProfile,
+} from 'firebase/auth';
 import type { AuthError } from 'firebase/auth/cordova';
 
 import { firebase } from '@/firebase/config';
@@ -30,16 +34,21 @@ export const registerUser = defineAction({
     //creacion de usuario
     try {
       const user = await createUserWithEmailAndPassword(firebase.auth, email, password)
-console.log(user)
-
-      //actualizar el nombre (display name)
-
-      //verificar el correo electronico
+      //console.log(user)
+      if (!firebase.auth.currentUser) return
+      //actualizar el nombre: 
+      await updateProfile(firebase.auth.currentUser!, {
+        displayName: name
+      })
+//verificacion
+await sendEmailVerification(firebase.auth.currentUser!, {
+  //url: 'http://localhost:4321/protected'
+  url: `${import.meta.env.WEBSITE_URL}/protected`
+})
       return user
-
     } catch (error) {
       const firebaseError = error as AuthError
-      if(firebaseError.code === 'auth/email-already-in-use'){
+      if (firebaseError.code === 'auth/email-already-in-use') {
         throw new Error('Credenciales repetidas, intenta con otro email')
       }
 
