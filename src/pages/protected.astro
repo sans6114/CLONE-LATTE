@@ -2,8 +2,8 @@
 import { firebase } from "@/firebase/config";
 import MainLayout from "@/layouts/MainLayout.astro";
 
-// const user = firebase.auth.currentUser;
-// await user.reload()
+ const userValue = firebase.auth.currentUser ;
+await userValue?.reload()
 // const {
 //   displayName = "No display name",
 //   email,
