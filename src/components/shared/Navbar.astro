@@ -1,12 +1,16 @@
 ---
+import LatteAnteojos from "@/icons/latteitem/LatteAnteojos.astro";
 import LatteLogo from "@/icons/logos/LatteLogo.astro";
+import SelectThemeChange from "../ui/themechange/SelectThemeChange.astro";
 import { menuData } from "@/data/MenuData";
 import { firebase } from "@/firebase/config";
 
 const user = firebase.auth.currentUser;
-
 ---
-<nav class="navbar bg-base-200 my-6 mx-auto w-5/6 rounded-full shadow-2xl border-2 border-base-300">
+
+<nav
+  class="navbar bg-base-200 my-6 mx-auto w-full md:w-5/6 rounded-full shadow-2xl border-2 border-base-300 mb-10"
+>
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle mx-4">
@@ -36,57 +40,17 @@ const user = firebase.auth.currentUser;
   </div>
   <div class="navbar-center"></div>
   <div class="navbar-end flex gap-2">
-    <button class="btn btn-ghost btn-circle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-      </svg>
-    </button>
+    <SelectThemeChange />
 
     {
       user ? (
-        <button class="btn" id="logOut">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-            />
-          </svg>
+        <button class="btn btn-circle w-auto px-2" id="logOut">
+          <LatteAnteojos />
           Salir
         </button>
       ) : (
-        <a class="btn" href="/login">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-            />
-          </svg>
+        <a class="btn btn-circle w-auto px-4 mx-2 font-bold border border-primary" href="/login">
+          <LatteAnteojos />
           Comercios
         </a>
       )

@@ -7,12 +7,19 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB39Ea-IObHyMzCR8bBEX2b-1ZudlRSZ6E",
-  authDomain: "astro-auth-4aa9e.firebaseapp.com",
-  projectId: "astro-auth-4aa9e",
-  storageBucket: "astro-auth-4aa9e.appspot.com",
-  messagingSenderId: "501735567221",
-  appId: "1:501735567221:web:e8357469b9d10126f0ad3c"
+
+  apiKey: import.meta.env.VITE_API_KEY,
+
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+
+  projectId: import.meta.env.VITE_PROJECT_ID,
+
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+
+  appId: import.meta.env.VITE_APP_ID
+
 };
 
 // Initialize Firebase
@@ -21,6 +28,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
 
 export const firebase = {
-    app,
-    auth
+  app,
+  auth
 }
