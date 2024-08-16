@@ -1,131 +1,105 @@
 ---
-import {firebase} from "@/firebase/config";
-let links = [
-  { href: "/", text: "Home" },
-  { href: "/protected", text: "Protegido" },
-  { href: "/register", text: "Registarse" },
-  { href: "/login", text: "Ingresar" },
-];
-
+import LatteLogo from "@/icons/logos/LatteLogo.astro";
+import { menuData } from "@/data/MenuData";
+import { firebase } from "@/firebase/config";
 
 const user = firebase.auth.currentUser;
 
-const {isLoggedIn} = Astro.locals
-if(isLoggedIn){
-  links.splice(2,2)
-}
 ---
-
-
-<div class="navbar bg-base-100">
+<nav class="navbar bg-base-200 my-6 mx-auto w-5/6 rounded-full shadow-2xl border-2 border-base-300">
   <div class="navbar-start">
     <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h7" />
-        </svg>
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle mx-4">
+        <LatteLogo />
       </div>
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li
-          class="text-center"
-        >
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+      >
+        <li class="text-center">
           {
-            links.map(({ href, text }) => (
+            menuData.map(({ link, content }) => (
               <div class="btn btn-primary btn-outline my-2">
-                <a href={href} class="block py-2 px-3 w-full text-start" aria-current="page">
-                  {text}
+                <a
+                  href={link}
+                  class="block py-2 px-3 w-full text-start"
+                  aria-current="page"
+                >
+                  {content}
                 </a>
               </div>
             ))
           }
         </li>
-
       </ul>
     </div>
   </div>
-  <div class="navbar-center">
-  </div>
+  <div class="navbar-center"></div>
   <div class="navbar-end flex gap-2">
-    <button  class="btn btn-ghost btn-circle">
+    <button class="btn btn-ghost btn-circle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5"
         fill="none"
         viewBox="0 0 24 24"
-        stroke="currentColor">
+        stroke="currentColor"
+      >
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
       </svg>
     </button>
-    
-        {
-          user ? (
-          <button class="btn" id="logOut">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor">
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-  </svg>
-  Salir
-</button>
-          ) : (
-          <a class="btn" href="/login">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor">
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-  </svg>
-  Entrar
-</a>
-          )
-        }
 
-
-   
-    
+    {
+      user ? (
+        <button class="btn" id="logOut">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            />
+          </svg>
+          Salir
+        </button>
+      ) : (
+        <a class="btn" href="/login">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            />
+          </svg>
+          Comercios
+        </a>
+      )
+    }
   </div>
-</div>
-
-
+</nav>
 <script>
-import { actions } from "astro:actions"
+  import { actions } from "astro:actions";
 
+  const btnlogOut = document.querySelector("#logOut") as HTMLButtonElement;
 
-
-
-  const btnlogOut = document.querySelector('#logOut') as HTMLButtonElement
-
-
-  btnlogOut?.addEventListener('click', async() => {
-  await actions.logOut()
-  window.location.replace('/')
-  })
+  btnlogOut?.addEventListener("click", async () => {
+    await actions.logOut();
+    window.location.replace("/");
+  });
 </script>
