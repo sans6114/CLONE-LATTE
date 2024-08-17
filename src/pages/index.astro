@@ -1,8 +1,10 @@
 ---
+import MarcasSection from '@/components/sections/index/MarcasSection.astro'
 import AnnounceBanner from "@/components/ui/banner/AnnounceBanner.astro"
 import MainLayout from "@/layouts/MainLayout.astro"
 import HeroSection from '@/components/sections/index/HeroSection.astro'
 import heroImage from '@/images/index/hero-image.avif'
+import Divider from '@/components/ui/utils/Divider.astro'
 ---
 
 <MainLayout title="Home">
@@ -15,9 +17,20 @@ url="/"
 <!-- HERO -->
  <HeroSection 
  title=`El chocolate que <span
- class="text-primary-100">habla por vos</span>`
+ class="text-violet-500">habla por vos</span>`
 subTitle="Diseñados para expresar tus sentimientos de la mejor forma."
+primaryBtn="Ver productos"
+primaryBtnURL="/productos"
 src={heroImage}
 alt="Variedad de chocolates personalizados de Latte Chocolate"
  />
+<Divider />
+<!-- SWIPER MARCAS -->
+ <!-- <SwiperMarcas />  -->
+ <MarcasSection
+ title="Confianza de comercios"
+ subTitle="Un producto revelador que"
+/>
+<Divider />
+
 </MainLayout>
