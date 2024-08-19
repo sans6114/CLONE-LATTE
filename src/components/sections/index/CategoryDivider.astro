@@ -1,0 +1,54 @@
+---
+import ButtonCompleting from '@/components/ui/buttons/ButtonCompleting.astro'
+
+
+interface CategoriaProps {
+title: string,
+subtitle: string,
+img: string,
+alt: string,
+btnTitle: string,
+btnUrl: string
+right: boolean,
+}
+
+interface Props {
+  categoria: CategoriaProps
+}
+
+const {categoria} = Astro.props
+---
+<div class="flex flex-col md:flex-row items-center w-full px-5">
+    {
+      categoria.right ? (
+        
+          <!-- Si `right` es true, muestra la imagen primero y luego el contenido -->
+          <div class="md:w-1/2 md:mx-auto">
+            <img class="rounded-3xl shadow-2xl" src={categoria.img} alt={categoria.alt} />
+          </div>
+          <div class="shadow-xl rounded-sm flex flex-col items-center text-start md:w-1/4 md:mx-auto">
+            <div class="card-body order-1">
+              <h2 class="card-title">{categoria.title}</h2>
+              <p>{categoria.subtitle}</p>
+              <ButtonCompleting btnTitle={categoria.btnTitle} url={categoria.btnUrl} />
+            </div>
+          </div>
+        
+      ) : (
+       
+          <!-- Si `right` es false, muestra el contenido primero y luego la imagen -->
+          <div class="shadow-xl rounded-sm flex flex-col items-center text-start md:w-1/4">
+            <div class="card-body order-1">
+              <h2 class="card-title">{categoria.title}</h2>
+              <p>{categoria.subtitle}</p>
+              <ButtonCompleting btnTitle={categoria.btnTitle} url={categoria.btnUrl} />
+            </div>
+          </div>
+          <div class="md:w-1/2 md: mx-auto">
+            <img class="rounded-3xl shadow-2xl" src={categoria.img} alt={categoria.alt} />
+          </div>
+       
+      )
+    }
+  </div>
+  

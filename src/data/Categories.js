@@ -1,0 +1,58 @@
+const packsData = [
+  {
+    title: "Latte Amor",
+    subtitle: "Pack Amor para un gesto especial con alguien querido.",
+    img: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    alt: "Pack de Latte Chocolate Amor",
+    btnTitle: "Ver más",
+    btnUrl: "/packs/amor",
+    right: true,
+  },
+  {
+    title: "Latte Amistad",
+    subtitle: "Pack Amistad para regalar a un amigo especial.",
+    img: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    alt: "Pack de Latte Chocolate Amistad",
+    btnTitle: "Ver más",
+    btnUrl: "/packs/amistad",
+    right: false,
+  },
+  {
+    title: "Latte Cumpleaños",
+    subtitle: "Pack Cumpleaños para celebrar con regalos especiales.",
+    img: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    alt: "Pack de Latte Chocolate Cumpleaños",
+    btnTitle: "Ver más",
+    btnUrl: "/packs/cumpleaños",
+    right: true,
+  },
+  {
+    title: "Latte Celebraciones",
+    subtitle: "Pack Celebraciones para un toque dulce en días especiales.",
+    img: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    alt: "Pack de Latte Chocolate Celebraciones",
+    btnTitle: "Ver más",
+    btnUrl: "/packs/celebraciones",
+    right: false,
+  },
+  {
+    title: "Latte Vinotecas",
+    subtitle: "Pack Celebraciones para un toque dulce en días especiales.",
+    img: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    alt: "Pack de Latte Chocolate Celebraciones",
+    btnTitle: "Ver más",
+    btnUrl: "/packs/vinotecas",
+    right: true,
+  },
+  {
+    title: "Latte Dieteticas",
+    subtitle: "Pack Celebraciones para un toque dulce en días especiales.",
+    img: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    alt: "Pack de Latte Chocolate Celebraciones",
+    btnTitle: "Ver más",
+    btnUrl: "/packs/dieteticas",
+    right: false,
+  },
+];
+
+export default packsData;

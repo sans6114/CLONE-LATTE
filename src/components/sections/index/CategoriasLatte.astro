@@ -1,0 +1,31 @@
+---
+import Divider from '@/components/ui/utils/Divider.astro'
+import CategoryDivider from './CategoryDivider.astro'
+import Categorias from '@/data/Categories'
+
+interface Props {
+  title : string,
+  subtitle: string,
+  btnTitle: string
+  btnUrl: string
+}
+
+const {title, subtitle, btnTitle, btnUrl} = Astro.props
+---
+
+<section class="flex flex-col my-[150px]">
+    <div class="flex flex-col md:px-10 items-center gap-y-5 mb-10 text-center">
+        <h1 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">{title}</h1>
+        <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">{subtitle}</p>
+      </div>
+{
+Categorias.map((data) => (
+
+
+<CategoryDivider categoria={data} />
+<div class="border border-violet-500 w-3/5 mx-auto my-[100px]">
+</div>
+))
+}
+
+</section>

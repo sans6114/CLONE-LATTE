@@ -1,0 +1,33 @@
+---
+// Import the necessary dependencies
+import { Image } from "astro:assets";
+;
+interface CardProps {
+CardTitle: string,
+subCard: string,
+imgCard: any,
+alt: string
+}
+
+interface Props {
+  card : CardProps
+}
+
+const {card} = Astro.props
+---
+
+<div class="h-[250px] md:h-auto card bg-base-100 shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-100 ease-in-out rounded-3xl">
+  <figure>
+      <img
+      src={card.imgCard}
+      alt={card.alt}
+      class="h-full md:h-96 w-full object-cover object-center rounded-3xl"
+      draggable={"false"}
+      loading={"eager"}
+    />
+  </figure>
+    <div class="card-body absolute inset-0 flex flex-col justify-center items-center bg-opacity-75 bg-white text-center opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 rounded-3xl">
+      <h2 class="card-title">{card.CardTitle}</h2>
+      <p>{card.subCard}</p>
+    </div>
+  </div>

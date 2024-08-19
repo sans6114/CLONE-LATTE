@@ -1,9 +1,12 @@
 ---
 import MarcasSection from '@/components/sections/index/MarcasSection.astro'
+import CategoriasLatte from '@/components/sections/index/CategoriasLatte.astro'
 import AnnounceBanner from "@/components/ui/banner/AnnounceBanner.astro"
 import MainLayout from "@/layouts/MainLayout.astro"
 import HeroSection from '@/components/sections/index/HeroSection.astro'
+import BeneficiosLatte from '@/components/sections/index/BeneficiosLatte.astro'
 import heroImage from '@/images/index/hero-image.avif'
+import alfajorImage from '@/images/index/alfajorImage.png'
 import Divider from '@/components/ui/utils/Divider.astro'
 ---
 
@@ -32,5 +35,9 @@ alt="Variedad de chocolates personalizados de Latte Chocolate"
  subTitle="Un producto revelador que"
 />
 <Divider />
+<BeneficiosLatte title='¿Por qué destacamos?' subTitle='En Latte, respondemos a una necesidad única en el sector de los chocolates y dulces, creando momentos únicos.' src={alfajorImage} alt='Imagen de mockup de cajas de chocolates latte'/> 
+<Divider />
 
+<CategoriasLatte title='Nuestro segmento de categorías' subtitle='Si queres adquirir este tipo de segmentos enteros entra al protal comercio y crea o accede a tu cuenta.' btnTitle='Crear mi cuenta' btnUrl='/register' /> 
+<Divider/>
 </MainLayout>

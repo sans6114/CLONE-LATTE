@@ -1,0 +1,66 @@
+---
+// Import the necessary dependencies
+import { Image } from "astro:assets";
+import CardIndex from "./CardIndex.astro";
+import BenefitsData from '@/data/BenefitsData'
+
+interface Props {
+  title: string;
+  subTitle: string;
+  src: any;
+  alt: string;
+}
+// Define props from Astro
+const { title, subTitle, src, alt } = Astro.props;
+---
+
+<section
+  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full flex flex-col"
+>
+  <!-- Block to display the feature image -->
+  <div class="relative overflow-hidden">
+    <Image
+      src={src}
+      alt={alt}
+      class="h-full w-full object-cover object-center"
+      draggable={"false"}
+      format={"avif"}
+      loading={"eager"}
+    />
+  </div>
+  <div class="flex flex-col">
+    <div class="flex flex-col md:px-10 items-center gap-y-5 mb-10 text-center">
+      <h1 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">{title}</h1>
+      <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">{subTitle}</p>
+    </div>
+    <div
+      class="flex flex-col md:flex-row cursor-pointer bg-violet-500 bg-opacity-20 p-10 md:px-24 md:py-4 w-full mx-auto md:mx-10 rounded-3xl"
+    > {
+      BenefitsData.map((card) => (
+        <CardIndex card={card} />
+      ))
+    }
+
+    </div>
+  </div>
+</section>
+<script>
+
+
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("touchstart", () => {
+      // Remover clases de todas las tarjetas
+      document.querySelectorAll(".card").forEach((otherCard) => {
+        otherCard.classList.remove("scale-125", "z-40");
+        otherCard.querySelector(".card-body").classList.add("opacity-0");
+        otherCard.querySelector(".card-body").classList.remove("opacity-100");
+      });
+
+      // Agregar clases solo a la tarjeta tocada
+      card.classList.add("scale-125", "z-40");
+      const cardBody = card.querySelector(".card-body");
+      cardBody.classList.remove("opacity-0");
+      cardBody.classList.add("opacity-100");
+    });
+  });
+</script>
