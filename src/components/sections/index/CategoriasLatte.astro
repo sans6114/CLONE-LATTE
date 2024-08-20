@@ -1,21 +1,23 @@
 ---
-import Divider from '@/components/ui/utils/Divider.astro'
 import CategoryDivider from './CategoryDivider.astro'
 import Categorias from '@/data/Categories'
+import { Image } from "astro:assets";
 
 interface Props {
   title : string,
   subtitle: string,
   btnTitle: string
-  btnUrl: string
+  btnUrl: string,
+  img2: any,
+  alt2: string
 }
 
-const {title, subtitle, btnTitle, btnUrl} = Astro.props
+const {title, subtitle, img2, alt2} = Astro.props
 ---
 
 <section class="flex flex-col my-[150px]">
     <div class="flex flex-col md:px-10 items-center gap-y-5 mb-10 text-center">
-        <h1 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">{title}</h1>
+        <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">{title}</h1>
         <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">{subtitle}</p>
       </div>
 {
@@ -27,5 +29,20 @@ Categorias.map((data) => (
 </div>
 ))
 }
-
+<div class="flex flex-col">
+  <div class="flex flex-col md:px-10 items-center gap-y-5 text-center">
+    <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">Alfajor de la fortuna</h2>
+    <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">¿Sabías que hacemos alfajores también? Si, pero como somos latte y queremos tener nuestro toque distintivo siempre, tenes que saber que cada alfajor cuenta con una frase única que puede ser capaz de alegrarte el día.</p>
+  </div>
+  {img2 && alt2 &&
+    <Image
+          src={img2}
+          alt={alt2}
+          class="h-full w-full scale-110 object-cover object-center"
+          draggable={"false"}
+          loading={"eager"}
+          format={"avif"}
+     />
+    }
+</div>
 </section>

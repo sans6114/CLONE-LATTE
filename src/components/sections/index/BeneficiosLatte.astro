@@ -52,15 +52,21 @@ const { title, subTitle, src, alt } = Astro.props;
       // Remover clases de todas las tarjetas
       document.querySelectorAll(".card").forEach((otherCard) => {
         otherCard.classList.remove("scale-125", "z-40");
-        otherCard.querySelector(".card-body").classList.add("opacity-0");
-        otherCard.querySelector(".card-body").classList.remove("opacity-100");
+        const otherCardBody = otherCard.querySelector(".card-body")
+        if(otherCardBody){
+          otherCardBody.classList.add("opacity-0");
+          otherCardBody.classList.remove("opacity-100");
+        }
       });
 
       // Agregar clases solo a la tarjeta tocada
       card.classList.add("scale-125", "z-40");
       const cardBody = card.querySelector(".card-body");
-      cardBody.classList.remove("opacity-0");
-      cardBody.classList.add("opacity-100");
+      if(cardBody){
+
+        cardBody.classList.remove("opacity-0");
+        cardBody.classList.add("opacity-100");
+      }
     });
   });
 </script>

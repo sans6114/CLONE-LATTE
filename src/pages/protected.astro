@@ -11,7 +11,9 @@ await userValue?.reload()
 //   photoURL,
 // } = user;
 
-const {user, isLoggedIn} = Astro.locals 
+//ELIMINE ISLOGGEDIN, REVISAR
+
+const {user} = Astro.locals 
 if(!user){
   return
 }

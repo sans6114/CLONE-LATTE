@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import InstagramBtn from "@/components/ui/buttons/InstagramBtn.astro";
+import TiktokBtn from "@/components/ui/buttons/Tiktok.astro";
+interface Props {
+  src: any;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<section class="flex flex-col md:flex-row p-10 my-[60px] justify-center">
+    <div class="flex flex-col items-center gap-y-5 mb-10 text-center">
+        <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl lg:leading-tight ">Te invitamos a seguirnos en nuestras redes</h1>
+        <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 ">Contamos con una caracteristica clave: creatividad. Nuestras redes son denotación de esto, te invitamos a seguirnos</p>
+        <div>
+<InstagramBtn btnTitle="Instragram" btnUrl="https://www.instagram.com/latteechocolate/?hl=es"/>
+<TiktokBtn btnTitle="Tiktok" btnUrl="#" />
+        </div>
+      </div>
+  <div class="bg-violet-500 bg-opacity-25 rounded-3xl">
+    <Image
+      src={src}
+      alt={alt}
+      class="h-full w-full scale-110 object-cover object-center"
+      draggable={"false"}
+      loading={"eager"}
+      format={"avif"}
+    />
+  </div>
+</section>
