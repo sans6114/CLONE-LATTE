@@ -14,7 +14,7 @@ export const logIn = defineAction({
         password: z.string().min(6),
         remember_me: z.boolean().optional(),
     }),
-    handler: async ({ email, password }, { cookies }) => {
+    handler: async ({ email, password }) => {
 
         try {
             const user = await signInWithEmailAndPassword(firebase.auth, email, password)
