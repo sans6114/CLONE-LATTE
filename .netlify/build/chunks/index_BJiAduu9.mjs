@@ -1,4 +1,4 @@
-import { c as callSafely, a as ActionError, b as ActionInputError, d as getApiContext$1 } from './shared_B6N_HGYr.mjs';
+import { c as callSafely, a as ActionError, b as ActionInputError, d as getApiContext$1 } from './shared_CDJ7EpwD.mjs';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithCredential, signOut, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from 'firebase/auth';
 import { f as firebase } from './config_COeD87Ye.mjs';
 import { z } from 'zod';
@@ -122,7 +122,7 @@ function toActionProxy(actionCallback = {}, aggregatedPath = "/_actions/") {
 }
 async function actionHandler(param, path) {
   {
-    const { getAction } = await import('./shared_B6N_HGYr.mjs').then(n => n.u);
+    const { getAction } = await import('./shared_CDJ7EpwD.mjs').then(n => n.u);
     const action = await getAction(path);
     if (!action) throw new Error(`Action not found: ${path}`);
     return action(param);
@@ -137,7 +137,7 @@ const logIn = defineAction({
     password: z.string().min(6),
     remember_me: z.boolean().optional()
   }),
-  handler: async ({ email, password }, { cookies }) => {
+  handler: async ({ email, password }) => {
     try {
       const user = await signInWithEmailAndPassword(firebase.auth, email, password);
       return user;

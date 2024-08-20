@@ -21,7 +21,7 @@ function hasContentType(contentType, expected) {
 }
 async function getAction(path) {
   const pathKeys = path.replace("/_actions/", "").split(".");
-  let { server: actionLookup } = await import('./index_BTTJU9Yw.mjs');
+  let { server: actionLookup } = await import('./index_BJiAduu9.mjs');
   for (const key of pathKeys) {
     if (!(key in actionLookup)) {
       return void 0;
