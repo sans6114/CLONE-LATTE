@@ -6,12 +6,11 @@ import BenefitsData from '@/data/BenefitsData'
 
 interface Props {
   title: string;
-  subTitle: string;
   src: any;
   alt: string;
 }
 // Define props from Astro
-const { title, subTitle, src, alt } = Astro.props;
+const { title, src, alt } = Astro.props;
 ---
 
 <section
@@ -29,9 +28,8 @@ const { title, subTitle, src, alt } = Astro.props;
     />
   </div>
   <div class="flex flex-col">
-    <div class="flex flex-col md:px-10 items-center gap-y-5 mb-10 text-center">
-      <h1 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">{title}</h1>
-      <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">{subTitle}</p>
+    <div class="flex flex-col md:px-10 items-center gap-y-5 mb-5 md:mb-[150px] text-center">
+      <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">{title}</h2>
     </div>
     <div
       class="flex flex-col md:flex-row cursor-pointer p-10 md:px-24 md:py-4 w-5/6 md:w-full mx-auto md:mx-10 rounded-3xl"

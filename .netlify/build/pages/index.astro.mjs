@@ -3,15 +3,16 @@ import { c as createComponent, r as renderTemplate, m as maybeRenderHead, b as c
 import 'kleur/colors';
 import 'clsx';
 /* empty css                                 */
+import { $ as $$PrimaryBtn, h as heroImage } from '../chunks/PrimaryBtn_CJZ39e61.mjs';
 import '@astrojs/internal-helpers/path';
 import { $ as $$Image } from '../chunks/_astro_assets_BJAJeRUX.mjs';
-import { $ as $$Divider } from '../chunks/Divider_BoVquTCI.mjs';
-import { $ as $$MainLayout } from '../chunks/MainLayout_DNUuaHua.mjs';
+import { $ as $$Divider, a as $$HeroSectionAlt } from '../chunks/Divider_BrrEOLmL.mjs';
+import { $ as $$MainLayout } from '../chunks/MainLayout_DZlfg4QP.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Astro$c = createAstro();
+const $$Astro$d = createAstro();
 const $$MarcasSection = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$MarcasSection;
   const { title, subTitle } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"> <!-- Title and description --> <div class="mx-auto mb-6 w-full space-y-1 text-center sm:w-1/2 lg:w-1/3"> <h2 class="text-balance text-2xl font-bold leading-tight sm:text-3xl"> ${title} </h2> ${subTitle && renderTemplate`<p class="text-pretty font-semibold leading-tight"> ${subTitle}${" "} <span class="bg-gradient-to-r from-violet-500 to-pink-500 bg-clip-text text-xl font-bold text-transparent">
@@ -19,22 +20,9 @@ garpa
 </span> </p>`} </div> <div class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-20 mt-10"> <!-- Clients Group SVGs --> <!-- First --> <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-40 lg:py-5 mx-auto h-auto w-32 py-3 sm:mx-0" viewBox="0 0 512 512"><path fill="#8080ff" d="M410.66 180.72q-7.67-2.62-15.45-4.88q1.29-5.25 2.38-10.56c11.7-56.9 4.05-102.74-22.06-117.83c-25-14.48-66 .61-107.36 36.69q-6.1 5.34-11.95 11q-3.9-3.76-8-7.36c-43.35-38.58-86.8-54.83-112.88-39.69c-25 14.51-32.43 57.6-21.9 111.53q1.58 8 3.55 15.93a321 321 0 0 0-17.77 5.6C48.46 198.9 16 226.73 16 255.59c0 29.82 34.84 59.72 87.77 77.85q6.44 2.19 13 4.07q-2.13 8.49-3.77 17.17c-10 53-2.2 95.07 22.75 109.49c25.77 14.89 69-.41 111.14-37.31q5-4.38 10-9.25q6.32 6.11 13 11.86c40.8 35.18 81.09 49.39 106 34.93c25.75-14.94 34.12-60.14 23.25-115.13q-1.25-6.3-2.88-12.86q4.56-1.35 8.93-2.79c55-18.27 90.83-47.81 90.83-78c-.02-29-33.52-57.01-85.36-74.9m-129-81.08c35.43-30.91 68.55-43.11 83.65-34.39c16.07 9.29 22.32 46.75 12.22 95.88q-1 4.8-2.16 9.57a488 488 0 0 0-64.18-10.16a481 481 0 0 0-40.57-50.75q5.38-5.22 11.02-10.15ZM157.73 280.25q6.51 12.6 13.61 24.89q7.23 12.54 15.07 24.71a435 435 0 0 1-44.24-7.13c4.24-13.72 9.46-27.97 15.56-42.47m0-48.33c-6-14.19-11.08-28.15-15.25-41.63c13.7-3.07 28.3-5.58 43.52-7.48q-7.65 11.94-14.72 24.23t-13.58 24.88Zm10.9 24.17q9.48-19.77 20.42-38.78q10.93-19 23.27-37.13c14.28-1.08 28.92-1.65 43.71-1.65s29.52.57 43.79 1.66q12.21 18.09 23.13 37t20.69 38.6Q334 275.63 323 294.73q-10.91 19-23 37.24c-14.25 1-29 1.55-44 1.55s-29.47-.47-43.46-1.38q-12.43-18.19-23.46-37.29t-20.48-38.76ZM340.75 305q7.25-12.58 13.92-25.49a440 440 0 0 1 16.12 42.32a434 434 0 0 1-44.79 7.65q7.62-12.09 14.75-24.48m13.72-73.07q-6.64-12.65-13.81-25q-7-12.18-14.59-24.06c15.31 1.94 30 4.52 43.77 7.67a440 440 0 0 1-15.37 41.39m-98.24-107.45a440 440 0 0 1 28.25 34.18q-28.35-1.35-56.74 0c9.33-12.34 18.88-23.79 28.49-34.18M145.66 65.86c16.06-9.32 51.57 4 89 37.27c2.39 2.13 4.8 4.36 7.2 6.67A491 491 0 0 0 201 160.51a499 499 0 0 0-64.06 10q-1.83-7.36-3.3-14.82c-9.05-46.23-3.06-81.08 12.02-89.83m-23.41 251.85q-6-1.71-11.85-3.71c-23.4-8-42.73-18.44-56-29.81c-11.88-10.19-17.9-20.36-17.9-28.6c0-17.51 26.06-39.85 69.52-55q8.19-2.85 16.52-5.21a493.5 493.5 0 0 0 23.4 60.75a502.5 502.5 0 0 0-23.69 61.58m111.13 93.67c-18.63 16.32-37.29 27.89-53.74 33.72c-14.78 5.23-26.55 5.38-33.66 1.27c-15.14-8.75-21.44-42.54-12.85-87.86q1.53-8 3.5-16a481 481 0 0 0 64.69 9.39a501 501 0 0 0 41.2 51c-2.98 2.93-6.03 5.75-9.14 8.48m23.42-23.22c-9.72-10.51-19.42-22.14-28.88-34.64q13.79.54 28.08.54c9.78 0 19.46-.21 29-.64a439 439 0 0 1-28.2 34.74m124.52 28.59c-2.86 15.44-8.61 25.74-15.72 29.86c-15.13 8.78-47.48-2.63-82.36-32.72c-4-3.44-8-7.13-12.07-11a484.5 484.5 0 0 0 40.23-51.2a478 478 0 0 0 65-10.05q1.47 5.94 2.6 11.64c4.81 24.3 5.5 46.28 2.32 63.47m17.4-102.64c-2.62.87-5.32 1.71-8.06 2.53a483 483 0 0 0-24.31-60.94a481.5 481.5 0 0 0 23.36-60.06c4.91 1.43 9.68 2.93 14.27 4.52c44.42 15.32 71.52 38 71.52 55.43c0 18.6-29.27 42.74-76.78 58.52"></path><path fill="#8080ff" d="M256 298.55a43 43 0 1 0-42.86-43a42.91 42.91 0 0 0 42.86 43"></path></svg> <!-- Second --> <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-40 lg:py-5 mx-auto h-auto w-32 py-3 sm:mx-0" fill="#8080ff" viewBox="0 0 56 56"><path d="M41.937 29.513c.07 7.552 6.625 10.065 6.698 10.097c-.056.178-1.047 3.582-3.454 7.098c-2.08 3.04-4.238 6.07-7.64 6.132c-3.34.061-4.415-1.982-8.235-1.982s-5.013 1.92-8.177 2.043c-3.282.125-5.782-3.287-7.88-6.316c-4.285-6.196-7.56-17.508-3.162-25.144c2.184-3.792 6.089-6.193 10.326-6.254c3.223-.062 6.266 2.168 8.236 2.168s5.667-2.682 9.554-2.288c1.627.068 6.194.657 9.127 4.95c-.236.147-5.45 3.182-5.393 9.496m-6.28-18.545C37.4 8.858 38.573 5.922 38.253 3c-2.512.101-5.55 1.674-7.352 3.782c-1.614 1.867-3.029 4.856-2.647 7.72c2.8.216 5.66-1.423 7.403-3.534"></path></svg> <!-- Third --> <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-40 lg:py-5 mx-auto h-auto w-32 py-3 sm:mx-0" viewBox="0 0 2048 2048"><path fill="#8080ff" d="M1024 0q25 0 49 11t42 28l894 894q20 20 29 45t10 52q0 26-11 49t-28 40l-890 890q-39 39-95 39q-25 0-49-11t-42-28L39 1115q-17-17-28-41t-11-50t10-51t29-44l613-613l232 232q-12 29-12 61q0 64 46 110l8 8q2 2 5 3t6 1t10 4v567q-12 5-20 14t-18 18q-26 26-41 55t-15 67q0 34 13 63t35 52t52 35t64 13q34 0 65-11t53-31t36-50t14-65q0-22-6-44t-18-41t-28-36t-35-27V763l212 212q-12 29-12 60q0 33 12 61t34 50t49 33t62 13q33 0 61-12t50-34t33-49t13-62q0-32-12-60t-34-50t-49-34t-61-13q-27 0-52 9l-227-227q9-25 9-52q0-33-12-61t-34-50t-49-33t-62-12q-24 0-50 8L743 224L929 39q39-39 95-39"></path></svg> <!-- Fourth --> <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-40 lg:py-5 mx-auto h-auto w-32 py-3 sm:mx-0" viewBox="0 0 2048 2048"><path fill="#8080ff" d="M1024 0q25 0 49 11t42 28l894 894q20 20 29 45t10 52q0 26-11 49t-28 40l-890 890q-39 39-95 39q-25 0-49-11t-42-28L39 1115q-17-17-28-41t-11-50t10-51t29-44l613-613l232 232q-12 29-12 61q0 64 46 110l8 8q2 2 5 3t6 1t10 4v567q-12 5-20 14t-18 18q-26 26-41 55t-15 67q0 34 13 63t35 52t52 35t64 13q34 0 65-11t53-31t36-50t14-65q0-22-6-44t-18-41t-28-36t-35-27V763l212 212q-12 29-12 60q0 33 12 61t34 50t49 33t62 13q33 0 61-12t50-34t33-49t13-62q0-32-12-60t-34-50t-49-34t-61-13q-27 0-52 9l-227-227q9-25 9-52q0-33-12-61t-34-50t-49-33t-62-12q-24 0-50 8L743 224L929 39q39-39 95-39"></path></svg> <!-- Quint --> <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-40 lg:py-5 mx-auto h-auto w-32 py-3 sm:mx-0" fill="#8080ff" viewBox="0 0 56 56"><path d="M41.937 29.513c.07 7.552 6.625 10.065 6.698 10.097c-.056.178-1.047 3.582-3.454 7.098c-2.08 3.04-4.238 6.07-7.64 6.132c-3.34.061-4.415-1.982-8.235-1.982s-5.013 1.92-8.177 2.043c-3.282.125-5.782-3.287-7.88-6.316c-4.285-6.196-7.56-17.508-3.162-25.144c2.184-3.792 6.089-6.193 10.326-6.254c3.223-.062 6.266 2.168 8.236 2.168s5.667-2.682 9.554-2.288c1.627.068 6.194.657 9.127 4.95c-.236.147-5.45 3.182-5.393 9.496m-6.28-18.545C37.4 8.858 38.573 5.922 38.253 3c-2.512.101-5.55 1.674-7.352 3.782c-1.614 1.867-3.029 4.856-2.647 7.72c2.8.216 5.66-1.423 7.403-3.534"></path></svg> </div> </section>`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/sections/index/MarcasSection.astro", void 0);
 
-const $$Astro$b = createAstro();
-const $$PrimaryBtn = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
-  Astro2.self = $$PrimaryBtn;
-  const { title, url, noArrow } = Astro2.props;
-  const baseClasses = "cursor-pointer group inline-flex items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm font-bold text-neutral-50 ring-zinc-500 transition duration-300 focus-visible:ring outline-none";
-  const borderClasses = "border border-transparent";
-  const bgColorClasses = "bg-violet-500 hover:bg-violet-700";
-  const disableClasses = "disabled:pointer-events-none disabled:opacity-50";
-  const fontSizeClasses = "2xl:text-base";
-  return renderTemplate`<!-- Link styled as a button, with dynamic title, URL, and optional arrow -->${maybeRenderHead()}<a${addAttribute(`${baseClasses} ${borderClasses} ${bgColorClasses} ${disableClasses} ${fontSizeClasses}`, "class")}${addAttribute(url, "href")}> ${title} <!-- Display the arrow based on the 'noArrow' property --> ${noArrow ? null : renderTemplate`<svg xmlns="http://www.w3.org/2000/svg" width="4em" height="1em" viewBox="0 0 15 15"> <path fill="currentColor" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"></path> </svg>`} </a>`;
-}, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/ui/buttons/PrimaryBtn.astro", void 0);
-
-const $$Astro$a = createAstro();
+const $$Astro$c = createAstro();
 const $$CategoryDivider = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$CategoryDivider;
   const { categoria } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<div class="flex flex-col md:flex-row items-center w-full px-5"> ${categoria.right ? renderTemplate`<!-- Si \`right\` es true, muestra la imagen primero y luego el contenido -->
@@ -101,9 +89,9 @@ const packsData = [
   },
 ];
 
-const $$Astro$9 = createAstro();
+const $$Astro$b = createAstro();
 const $$CategoriasLatte = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$CategoriasLatte;
   const { title, subtitle, img2, alt2 } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<section class="flex flex-col my-[150px] items-center"> <div class="flex flex-col md:px-10 items-center gap-y-5 mb-10 text-center"> <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">${title}</h2> <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">${subtitle}</p> </div> ${packsData.map((data) => renderTemplate`${renderComponent($$result, "CategoryDivider", $$CategoryDivider, { "categoria": data })}
@@ -114,13 +102,29 @@ const $$ChatItem = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div class="relative mx-auto border-gray-800  bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl mt-[100px]"> <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div> <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div> <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div> <div class="h-[64px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div> <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white"> <div class="absolute bottom-0 p-5"> <div class="chat chat-start"> <div class="chat-bubble">Nos encantaron!!!</div> </div> <div class="chat chat-start"> <div class="chat-bubble">Vuelvo del viaje y te pido más. San valentín es nuestro fuerte!! asi que le damos con todoooo</div> </div> <div class="chat chat-start"> <div class="chat-bubble">La presentación, elvoltorio. Todo perfecto! ame</div> </div> </div> </div> </div>`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/ui/utils/ChatItem.astro", void 0);
 
-const $$Astro$8 = createAstro();
+const $$Astro$a = createAstro();
 const $$StatsLatte = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$StatsLatte;
   const { title, subtitle } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<section class="flex flex-col mt-[60px]"> <!-- title --> <div class="flex flex-col md:px-10 items-center gap-y-5 text-center"> <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight"> ${title} </h2> <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48"> ${subtitle} </p> </div> <div class="flex flex-col"> <div> <!-- stats --> ${renderComponent($$result, "ChatItem", $$ChatItem, {})} <div class="flex gap-x-10 justify-center my-10"> <a class="btn btn-primary md:w-56" href="">Portal comercios</a> <a class="btn btn-secondary md:w-56" href="">Mapa interactivo</a> </div> </div> </div> ${renderComponent($$result, "Divider", $$Divider, {})} </section>`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/sections/index/StatsLatte.astro", void 0);
+
+const $$Astro$9 = createAstro();
+const $$Accordion = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
+  Astro2.self = $$Accordion;
+  const { title, description } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<div class="collapse bg-base-200"> <input type="radio" name="my-accordion-1" checked="checked"> <div class="collapse-title text-xl font-medium">${title}</div> <div class="collapse-content"> <p>${description}</p> </div> </div>`;
+}, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/ui/utils/Accordion.astro", void 0);
+
+const $$Astro$8 = createAstro();
+const $$TitleAccordion = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
+  Astro2.self = $$TitleAccordion;
+  const { title, subTitle, caracteristicas } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<section class="flex flex-col md:flex-row p-5"> <!-- Title and description --> <div class="md:w-3/4"> <!-- Each h1 and p tag renders a portion of the title and subTitle defined above --> <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight"> <!-- About Fragment: https://docs.astro.build/en/basics/astro-syntax/#fragments --> ${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate`${unescapeHTML(title)}` })} </h2> ${subTitle && renderTemplate`<p class="mt-3 text-pretty text-lg leading-relaxed  lg:w-4/5"> ${subTitle} </p>`} </div> <div class="mt-5 flex flex-col gap-y-4"> ${caracteristicas.map((caracteristica) => renderTemplate`${renderComponent($$result, "Accordion", $$Accordion, { "title": caracteristica.title, "description": caracteristica.description })}`)} </div> </section>`;
+}, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/sections/index/TitleAccordion.astro", void 0);
 
 const $$Astro$7 = createAstro();
 const $$InstagramBtn = createComponent(($$result, $$props, $$slots) => {
@@ -180,7 +184,7 @@ const $$CardIndex = createComponent(($$result, $$props, $$slots) => {
     return imagen.startsWith("http") ? imagen : `${"http://localhost:4321"}/src/images/index/${imagen}`;
   };
   const { card } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div class="h-[200px] md:h-auto card bg-violet-500 bg-opacity-50 shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-500 md:duration-300 ease-in-out rounded-3xl"> <figure> <img${addAttribute(formatter(card.imgCard), "src")}${addAttribute(card.alt, "alt")} class="h-full md:h-96 w-full object-cover object-center rounded-3xl"${addAttribute("false", "draggable")}${addAttribute("eager", "loading")}> </figure> <div class="card-body absolute inset-0 flex flex-col justify-center items-center bg-opacity-75 bg-violet-500 text-center text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 rounded-3xl"> <h2 class="card-title">${card.CardTitle}</h2> </div> </div>`;
+  return renderTemplate`${maybeRenderHead()}<div class="h-[200px] md:h-auto card bg-violet-500  shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-500 md:duration-300 ease-in-out rounded-3xl"> <figure> <img${addAttribute(formatter(card.imgCard), "src")}${addAttribute(card.alt, "alt")} class="h-full md:h-96 w-full object-cover object-center rounded-3xl"${addAttribute("false", "draggable")}${addAttribute("eager", "loading")}> </figure> <div class="card-body absolute inset-0 flex flex-col justify-center items-center bg-opacity-50 bg-violet-500 text-center text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 rounded-3xl"> <h2 class="card-title font-extrabold">${card.CardTitle}</h2> </div> </div>`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/sections/index/CardIndex.astro", void 0);
 
 // Ejemplos de objetos de prueba
@@ -221,22 +225,9 @@ const $$Astro$1 = createAstro();
 const $$BeneficiosLatte = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$BeneficiosLatte;
-  const { title, subTitle, src, alt } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full flex flex-col"> <!-- Block to display the feature image --> <div class="relative overflow-hidden"> ${renderComponent($$result, "Image", $$Image, { "src": src, "alt": alt, "class": "h-full w-full object-cover object-center", "draggable": "false", "format": "avif", "loading": "eager" })} </div> <div class="flex flex-col"> <div class="flex flex-col md:px-10 items-center gap-y-5 mb-10 text-center"> <h1 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">${title}</h1> <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">${subTitle}</p> </div> <div class="flex flex-col md:flex-row cursor-pointer p-10 md:px-24 md:py-4 w-5/6 md:w-full mx-auto md:mx-10 rounded-3xl"> ${cardData.map((card) => renderTemplate`${renderComponent($$result, "CardIndex", $$CardIndex, { "card": card })}`)} </div> </div> </section> `;
+  const { title, src, alt } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full flex flex-col"> <!-- Block to display the feature image --> <div class="relative overflow-hidden"> ${renderComponent($$result, "Image", $$Image, { "src": src, "alt": alt, "class": "h-full w-full object-cover object-center", "draggable": "false", "format": "avif", "loading": "eager" })} </div> <div class="flex flex-col"> <div class="flex flex-col md:px-10 items-center gap-y-5 mb-5 md:mb-[150px] text-center"> <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">${title}</h2> </div> <div class="flex flex-col md:flex-row cursor-pointer p-10 md:px-24 md:py-4 w-5/6 md:w-full mx-auto md:mx-10 rounded-3xl"> ${cardData.map((card) => renderTemplate`${renderComponent($$result, "CardIndex", $$CardIndex, { "card": card })}`)} </div> </div> </section> `;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/sections/index/BeneficiosLatte.astro", void 0);
-
-const heroImage = new Proxy({"src":"/_astro/hero-image.DRPoHq2O.avif","width":4067,"height":2576,"format":"avif"}, {
-						get(target, name, receiver) {
-							if (name === 'clone') {
-								return structuredClone(target);
-							}
-							if (name === 'fsPath') {
-								return "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/images/index/hero-image.avif";
-							}
-							
-							return target[name];
-						}
-					});
 
 const redes = new Proxy({"src":"/_astro/mockupredes.DReXkX0T.png","width":1152,"height":864,"format":"png"}, {
 						get(target, name, receiver) {
@@ -250,6 +241,58 @@ const redes = new Proxy({"src":"/_astro/mockupredes.DReXkX0T.png","width":1152,"
 							return target[name];
 						}
 					});
+
+const caracteristicas = [
+    {
+      title: "Originalidad",
+      description: "Si hay algo que nos caracteriza es la originalidad y la creatividad puesta en cada frase y producto fabricado. Si buscas algo nuevo y llamativo para tu comercio, o para dar un regalo, es por acá."
+    },
+    {
+      title: "Elaborado con amor y excelencia",
+      description: "Nuestros productos no solo son auténticos, también nos encargamos de ofrecerte un producto de calidad, elaborado con excelentes materias primas y procesos de producción certificados."
+    },
+    {
+      title: "Amor por la industria Argentina",
+      description: "Nuestros chocolates están diseñados para expresar. Queremos transmitir en cada producto la creatividad, excelencia, humor y ternura que también caracteriza a nuestro país."
+    },
+    {
+      title: "Creamos las frases en comunidad",
+      description: "No solo buscamos innovar en las frases y estar en la tendencia, sino que también hacemos parte a nuestra comunidad en la creación de nuevas frases a través de las redes sociales."
+    },
+    {
+      title: "Envíos rápidos y seguros",
+      description: "Garantizamos envíos seguros con seguimiento para que tu pedido llegue sin inconvenientes. Información proporcionada por Correo Argentino."
+    }
+  ];
+
+
+  
+  const preguntasFrecuentes = [
+    {
+      title: "¿Qué tipos de chocolates ofrecen en Latte Chocolate?",
+      description: "En Latte Chocolate ofrecemos chocolates de leche con maní. Nuestro enfoque está en las frases y el mensaje que tiene cada chocolate, cada temática tiene diversas frases."
+    },
+    {
+      title: "¿Puedo personalizar los chocolates para un evento especial?",
+      description: "¡Por supuesto! Podés personalizar tus chocolates para cualquier ocasión especial, como cumpleaños, casamientos y aniversarios. Ofrecemos opciones de empaque personalizado y mensajes especiales. Contactá a nuestro equipo de soporte para hacer tu pedido."
+    },
+    {
+      title: "¿Qué descuentos ofrecen para pedidos al por mayor?",
+      description: "Ofrecemos descuentos exclusivos para pedidos al por mayor. El porcentaje de descuento puede variar según el volumen del pedido. Ponete en contacto con nosotros para discutir tus necesidades y te proporcionaremos una estructura de descuentos personalizada."
+    },
+    {
+      title: "¿Qué tipo de soporte al cliente puedo esperar?",
+      description: "Todos nuestros clientes reciben soporte dedicado y ponemos mucho empeño en ofrecer la mejor atención posible."
+    },
+    {
+      title: "¿Cuánto tarda en llegar?",
+      description: "El tiempo de espera para recibir tu producto Latte va desde 3 a 5 días hábiles."
+    },
+    {
+      title: "¿Qué vencimiento tienen los chocolates?",
+      description: "Cada uno de nuestros productos posee 1 año de vigencia hasta su vencimiento."
+    }
+  ];
 
 const alfajorImage = new Proxy({"src":"/_astro/alfajorImage.ml38107F.png","width":4000,"height":2667,"format":"png"}, {
 						get(target, name, receiver) {
@@ -300,7 +343,7 @@ The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "Inicio | Latte chocolate" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "AnnounceBanner", $$AnnounceBanner, { "btnId": "dismiss-button", "btnTitle": "Explor\xE1 nuestros productos", "url": "/" })}  ${renderComponent($$result2, "HeroSection", $$HeroSection, { "title": `El chocolate que <span
- class="text-violet-500">habla por vos</span>`, "subTitle": "Dise\xF1ados para expresar tus sentimientos de la mejor forma.", "primaryBtn": "Ver productos", "primaryBtnURL": "/productos", "src": heroImage, "alt": "Variedad de chocolates personalizados de Latte Chocolate" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "MarcasSection", $$MarcasSection, { "title": "Confianza de comercios", "subTitle": "Un producto revelador que" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "BeneficiosLatte", $$BeneficiosLatte, { "title": "\xBFPor qu\xE9 destacamos?", "subTitle": "En Latte, respondemos a una necesidad \xFAnica en el sector de los chocolates y dulces, creando momentos \xFAnicos.", "src": heroImage, "alt": "Imagen de mockup de cajas de chocolates latte" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "CategoriasLatte", $$CategoriasLatte, { "title": "Nuestro segmento de categor\xEDas", "subtitle": "Si queres adquirir este tipo de segmentos enteros entra al protal comercio y crea o accede a tu cuenta.", "btnTitle": "Crear mi cuenta", "btnUrl": "/register", "img2": alfajorImage, "alt2": "imagen alfajor de la fortuna de latte chocolate" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "StatsLatte", $$StatsLatte, { "title": "Las mejores devoluciones del publico", "subtitle": "Nuestro producto es muy bien recibido por cada uno de nuestra red de revendedores, es un producto que realmente conviene." })} ${renderComponent($$result2, "TimeLine", $$TimeLine, { "title": "Un poco sobre nosotros" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "Redes", $$Redes, { "src": redes, "alt": "Imagen mockup sobre las redes sociales de latte chocolate" })} ` })}`;
+ class="text-violet-500">habla por vos</span>`, "subTitle": "Dise\xF1ados para expresar tus sentimientos de la manera mas original.", "primaryBtn": "Ver productos", "primaryBtnURL": "/productos", "src": heroImage, "alt": "Variedad de chocolates personalizados de Latte Chocolate" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "MarcasSection", $$MarcasSection, { "title": "Confianza de comercios", "subTitle": "Un producto revelador que" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "BeneficiosLatte", $$BeneficiosLatte, { "title": "\xBFPor qu\xE9 destacamos?", "src": heroImage, "alt": "Imagen de mockup de cajas de chocolates latte" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "Caracteristicas", $$TitleAccordion, { "title": "Una frase para cada momento", "subTitle": "En Latte, respondemos a una necesidad \xFAnica en el sector de los chocolates y dulces, creando momentos \xFAnicos.", "caracteristicas": caracteristicas })} ${renderComponent($$result2, "CategoriasLatte", $$CategoriasLatte, { "title": "Nuestro segmento de categor\xEDas", "subtitle": "Si queres adquirir este tipo de segmentos enteros entra al protal comercio y crea o accede a tu cuenta.", "btnTitle": "Crear mi cuenta", "btnUrl": "/register", "img2": alfajorImage, "alt2": "imagen alfajor de la fortuna de latte chocolate" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "StatsLatte", $$StatsLatte, { "title": "Las mejores devoluciones del publico", "subtitle": "Nuestro producto es muy bien recibido por cada uno de nuestra red de revendedores, es un producto que realmente conviene." })} ${renderComponent($$result2, "TimeLine", $$TimeLine, { "title": "Un poco sobre nosotros" })} ${renderComponent($$result2, "Divider", $$Divider, {})} ${renderComponent($$result2, "Caracteristicas", $$TitleAccordion, { "title": "Preguntas frecuentes", "subTitle": "En Latte, respondemos a una necesidad \xFAnica en el sector de los chocolates y dulces, creando momentos \xFAnicos.", "caracteristicas": preguntasFrecuentes })} ${renderComponent($$result2, "Redes", $$Redes, { "src": redes, "alt": "Imagen mockup sobre las redes sociales de latte chocolate" })} ${renderComponent($$result2, "HeroSectionAlt", $$HeroSectionAlt, { "title": "\xA1No dudes m\xE1s! comenz\xE1 a vender Latte en tu comercio", "subTitle": "Registrate para tener descuentos y vender un producto super original", "url": "./contact.astro" })} ` })}`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/pages/index.astro", void 0);
 
 const $$file = "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/pages/index.astro";

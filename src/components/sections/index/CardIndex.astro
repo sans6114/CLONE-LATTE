@@ -18,7 +18,7 @@ const formatter = (imagen: string) => {
 const {card} = Astro.props
 ---
 
-<div class="h-[200px] md:h-auto card bg-violet-500 bg-opacity-50 shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-500 md:duration-300 ease-in-out rounded-3xl">
+<div class="h-[200px] md:h-auto card bg-violet-500  shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-500 md:duration-300 ease-in-out rounded-3xl">
   <figure>
       <img
       src={formatter(card.imgCard)}
@@ -28,7 +28,7 @@ const {card} = Astro.props
       loading={"eager"}
     />
   </figure>
-    <div class="card-body absolute inset-0 flex flex-col justify-center items-center bg-opacity-75 bg-violet-500 text-center text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 rounded-3xl">
-      <h2 class="card-title">{card.CardTitle}</h2>
+    <div class="card-body absolute inset-0 flex flex-col justify-center items-center bg-opacity-50 bg-violet-500 text-center text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 rounded-3xl">
+      <h2 class="card-title font-extrabold">{card.CardTitle}</h2>
     </div>
   </div>

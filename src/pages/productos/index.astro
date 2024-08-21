@@ -1,0 +1,95 @@
+---
+// Importing necessary components
+import MainLayout from '../../layouts/MainLayout.astro';
+import CardSmall from "../../components/ui/utils/CardSmall.astro";
+import CardWide from "../../components/ui/utils/CardWide.astro";
+import TestimonialProducts from '../../components/sections/products/TestimonialProducts.astro'
+import TestimonialsSectionAlt from "../../components/sections/products/TestimonialSectionAlt.astro";
+import PrimaryBtn from '../../components/ui/buttons/PrimaryBtn.astro'
+
+
+// Define variables for page content
+const title: string = "Productos";
+const subTitle: string =
+  "Explora la gran variedad de productos que ofrecemos, cada uno tiene un mensaje pensado y diseñado para un momento en especial.";
+
+// Testimonial data that will be rendered in the component
+const testimonials = [
+  // First testimonial data
+  {
+    content:
+      " \"Hola! Cómo están? Ayer descubrí sus chocolates súper originales en la Puro Diseño. Quería saber dónde se pueden conseguir fuera de la Feria. Muchas gracias!.\" ",
+    author: "Cliente minorista",
+    role: "Instagram | Cliente minorista",
+
+  },
+  // Second testimonial data
+  {
+    content:
+      " \"Son hermosos y se les nota el amor con el que están hechos y sobre todo pensados, las ideas son hermosas..\"",
+    author: "Cliente minorista",
+    role: "Instagram | Cliente minorista",
+  },
+  // Third testimonial data
+  {
+    content:
+      " \"Son hermosos y se les nota el amor con el que están hechos y sobre todo pensados, las ideas son hermosas..\" ",
+    author: "Comercio",
+    role: "Instagram | Comercio",
+  },
+];
+
+---
+
+<MainLayout title="Productos | Latte chocolate">
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full mt-[70px] md:mt-[100px]"
+  >
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-balance text-2xl font-bold tracking-tight  md:text-4xl md:leading-tight"
+        >
+          {title}
+        </h1>
+        {
+          subTitle && (
+            <p class="hidden max-w-screen-sm text-pretty   md:block">
+              {subTitle}
+            </p>
+          )
+        }
+      </div>
+      <PrimaryBtn title="testimonios" url="#testimonials"/>
+    </div>
+    <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
+    <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
+    <!-- <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+      {
+        product.map((product, index) => {
+          const position = index % 4;
+          if (position === 0 || position === 3) {
+            return <CardSmall product={product} />;
+          } else {
+            return <CardWide product={product} />;
+          }
+        })
+      }
+    </section> -->
+  </div>
+  <!--Features statistics section-->
+  <TestimonialProducts
+    title="¿Por qué elegir Latte?"
+    subTitle="Latte tiene productos increibles, nuestro fuerte es transmitir mensajes a traves de nuestros productos. Compra ahora en nuestra tienda o contactanos para distribuir."
+    benefits={[
+      "Perfectos para regalar: Nuestros chocolates están diseñados para expresar mensajes especiales, siendo el regalo perfecto para cualquier ocasión.",
+      "Innovación constante: Siempre estamos innovando de forma creativa para ofrecerte la mejor experiencia.",
+      "Calidad: calidad excelente y sobre todo peso de años de experiencia en la industria.",
+    ]}
+  />
+  <!--Testimonials section-->
+  <TestimonialsSectionAlt
+    title="Que dicen nuestros clientes"
+    testimonials={testimonials}
+  />
+</MainLayout>
