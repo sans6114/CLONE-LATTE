@@ -1,0 +1,51 @@
+---
+import HeroNosotros from "@/components/sections/nosotros/HeroNosotros.astro";
+import RightSection from "@/components/sections/nosotros/RightSection.astro";
+import LeftSection from "@/components/sections/nosotros/LeftSection.astro";
+import HeroSectionAlt from "@/components/ui/banner/HeroSectionAlt.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import { articles } from "@/data/articlesHistoria";
+import Divider from "@/components/ui/utils/Divider.astro";
+
+const formatter = (image: string) => {
+  return image.startsWith("http")
+    ? image
+    : `${import.meta.env.WEBSITE_URL}/src/images/fabrica/${image}`;
+};
+---
+
+<MainLayout title="Nosotros | Latte chocolate">
+  <HeroNosotros
+    title="Conocenos un poco más"
+    subTitle="Nuestra historia y valores hacen de Latte un negocio único. Ya sea comprando un chocolate para un ser querido o revendiendo nuestros productos, eres parte esencial de nuestra visión y misión."
+  />
+  {
+    articles.map((article) => {
+      return article.isRight ? (
+        <RightSection
+          title={article.title}
+          subTitle={article.subTitle}
+          img={formatter(article.img)}
+          alt={article.alt}
+        />
+        <Divider/>
+      ) : (
+        <LeftSection
+          title={article.title}
+          subTitle={article.subTitle}
+          img={formatter(article.img)}
+          alt={article.alt}
+        />
+        <Divider/>
+
+      );
+    })
+  }
+    <!-- component to use CTA -->
+
+<HeroSectionAlt
+    title="No dudes más"
+    subTitle="Unite a nuestra red de revendedores y disfruta de múltiples beneficios"
+    url="./contact.astro"
+  />
+</MainLayout>
