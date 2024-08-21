@@ -1,5 +1,5 @@
 ---
-import ButtonCompleting from '@/components/ui/buttons/ButtonCompleting.astro'
+import ButtonCompleting from '@/components/ui/buttons/PrimaryBtn.astro'
 
 
 interface CategoriaProps {
@@ -32,9 +32,9 @@ const {categoria} = Astro.props
             <div class="card-body">
               <h2 class="card-title">{categoria.title}</h2>
               <p>{categoria.subtitle}</p>
-              <div class="w-56">
+              <div class="w-56 mt-5">
 
-              <ButtonCompleting btnTitle={categoria.btnTitle} url={categoria.btnUrl} />
+              <ButtonCompleting title={categoria.btnTitle} url={categoria.btnUrl} noArrow={false} />
               </div>
             </div>
           </div>
@@ -46,9 +46,9 @@ const {categoria} = Astro.props
             <div class="card-body">
               <h2 class="card-title">{categoria.title}</h2>
               <p>{categoria.subtitle}</p>
-              <div class="w-56">
+              <div class="w-56 mt-5">
 
-              <ButtonCompleting btnTitle={categoria.btnTitle} url={categoria.btnUrl} />
+              <ButtonCompleting title={categoria.btnTitle} url={categoria.btnUrl} noArrow={false} />
               </div>
             </div>
           </div>

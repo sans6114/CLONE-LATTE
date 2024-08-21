@@ -9,14 +9,19 @@ alt: string
 interface Props {
   card : CardProps
 }
-
+const formatter = (imagen: string) => {
+    return imagen.startsWith("http")
+      ? imagen
+      : `${import.meta.env.WEBSITE_URL}/src/images/index/${imagen}`;
+  };
+  
 const {card} = Astro.props
 ---
 
 <div class="h-[200px] md:h-auto card bg-base-100 shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-500 md:duration-300 ease-in-out rounded-3xl">
   <figure>
       <img
-      src={card.imgCard}
+      src={formatter(card.imgCard)}
       alt={card.alt}
       class="h-full md:h-96 w-full object-cover object-center rounded-3xl"
       draggable={"false"}

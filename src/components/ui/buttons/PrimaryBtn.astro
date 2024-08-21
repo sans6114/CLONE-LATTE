@@ -1,0 +1,32 @@
+---
+// Destructure the properties from Astro.props
+const { title, url, noArrow } = Astro.props;
+// Define TypeScript interface for the properties
+interface Props {
+  title?: string;
+  url?: string;
+  noArrow?: boolean;
+}
+// Define CSS classes for styling the button
+const baseClasses =
+  "cursor-pointer group inline-flex items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm font-bold text-neutral-50 ring-zinc-500 transition duration-300 focus-visible:ring outline-none";
+const borderClasses = "border border-transparent";
+const bgColorClasses =
+  "bg-violet-500 hover:bg-violet-700";
+const disableClasses = "disabled:pointer-events-none disabled:opacity-50";
+const fontSizeClasses = "2xl:text-base";
+---
+
+<!-- Link styled as a button, with dynamic title, URL, and optional arrow -->
+<a
+  class={`${baseClasses} ${borderClasses} ${bgColorClasses} ${disableClasses} ${fontSizeClasses}`}
+  href={url}
+>
+  {title}
+  <!-- Display the arrow based on the 'noArrow' property -->
+
+  {noArrow ? null : (
+  <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="1em" viewBox="0 0 15 15">
+	<path fill="currentColor" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414" />
+</svg>)}
+</a>

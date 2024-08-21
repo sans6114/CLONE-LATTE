@@ -1,0 +1,30 @@
+---
+import ButtonCompleting from "@/components/ui/buttons/PrimaryBtn.astro";
+
+// extraigo las propiedades necesarias
+const {
+  title,
+  subTitle,
+  img,
+  alt
+} = Astro.props;
+// Defino interface para propiedades
+interface Props {
+  title: string;
+  subTitle: string;
+  img: any,
+  alt: string
+}
+
+
+---
+
+<section class="flex flex-col md:flex-row md:justify-center w-full mb-[80px]">
+    <div class="px-4 flex-grow self-center">
+    <h2 class="text-start mb-4 text-balance text-4xl font-extrabold tracking-tight">{title}</h2>
+    <p class="mt-4 text-pretty text-lg leading-relaxed lg:w-4/5">{subTitle}</p>
+    </div>
+<div class="mask mask-squircle mt-5 md:w-2/4">
+<img src={img} alt={alt}>
+</div>
+</section>
