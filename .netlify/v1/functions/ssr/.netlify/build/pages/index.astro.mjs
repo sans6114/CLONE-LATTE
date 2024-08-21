@@ -180,42 +180,42 @@ const $$CardIndex = createComponent(($$result, $$props, $$slots) => {
     return imagen.startsWith("http") ? imagen : `${"http://localhost:4321"}/src/images/index/${imagen}`;
   };
   const { card } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div class="h-[200px] md:h-auto card bg-base-100 shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-500 md:duration-300 ease-in-out rounded-3xl"> <figure> <img${addAttribute(formatter(card.imgCard), "src")}${addAttribute(card.alt, "alt")} class="h-full md:h-96 w-full object-cover object-center rounded-3xl"${addAttribute("false", "draggable")}${addAttribute("eager", "loading")}> </figure> <div class="card-body absolute inset-0 flex flex-col justify-center items-center bg-opacity-75 bg-violet-500 text-center text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 rounded-3xl"> <h2 class="card-title">${card.CardTitle}</h2> </div> </div>`;
+  return renderTemplate`${maybeRenderHead()}<div class="h-[200px] md:h-auto card bg-violet-500 bg-opacity-50 shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-500 md:duration-300 ease-in-out rounded-3xl"> <figure> <img${addAttribute(formatter(card.imgCard), "src")}${addAttribute(card.alt, "alt")} class="h-full md:h-96 w-full object-cover object-center rounded-3xl"${addAttribute("false", "draggable")}${addAttribute("eager", "loading")}> </figure> <div class="card-body absolute inset-0 flex flex-col justify-center items-center bg-opacity-75 bg-violet-500 text-center text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 rounded-3xl"> <h2 class="card-title">${card.CardTitle}</h2> </div> </div>`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/sections/index/CardIndex.astro", void 0);
 
 // Ejemplos de objetos de prueba
 const cardData = [
-    {
-      CardTitle: "Originialidad",
-      subCard: "Si hay algo que nos caracteriza es la originalidad y el empeño puesto en cada frase y producto fabricado, si buscas algo nuevo, es por aca.",
-      imgCard: "latteperson1.png",
-      alt: "personje latte con diferentes vestimentas y expresiones"
-    },
-    {
-      CardTitle: "Simplicidad y excelencia",
-      subCard: "Nuestros productos no solo son autenticos, también nos encargamos de ofrecerte un producto de calidad, el packaging, el diseño, y el mismo chocolate es una denotación de excelencia.",
-      imgCard: "latteperson2.png",
-      alt: "personje latte con diferentes vestimentas y expresiones"
-    },
-    {
-      CardTitle: "Envíos rápidos y seguros",
-      subCard: "Garantizamos envíos seguros con seguimiento para que tu pedido llegue sin inconvenientes",
-      imgCard: "latteperson3.png",
-      alt: "personje latte con diferentes vestimentas y expresiones"
-    },
-    {
-      CardTitle: "Facilidad en metodo de pago",
-      subCard: "Ofrecemos métodos de pago sencillos y rápidos para tu comodidad.",
-      imgCard: "latteperson4.png",
-      alt: "personje latte con diferentes vestimentas y expresiones"
-    },
-    {
-      CardTitle: "Sos la prioridad",
-      subCard: "En latte nuestros clientes son prioridad, escuchamos constantemente a cada comentario y aporte de nuestros usuarios.",
-      imgCard: "latteperson1.png",
-      alt: "personje latte con diferentes vestimentas y expresiones"
-    }
-  ];
+  {
+    CardTitle: "Originalidad",
+    subCard: "Si hay algo que nos caracteriza es la originalidad y la creatividad puesta en cada frase y producto fabricado. Si buscas algo nuevo y llamativo para tu comercio, o para dar un regalo, es por acá.",
+    imgCard: "latteperson1.png",
+    alt: "personaje latte con diferentes vestimentas y expresiones"
+  },
+  {
+    CardTitle: "Elaborado con amor y excelencia",
+    subCard: "Nuestros productos no solo son auténticos, también nos encargamos de ofrecerte un producto de calidad, elaborado con excelentes materias primas y procesos de producción certificados.",
+    imgCard: "latteperson2.png",
+    alt: "personaje latte con diferentes vestimentas y expresiones"
+  },
+  {
+    CardTitle: "Amor por la industria Argentina",
+    subCard: "Nuestros chocolates están diseñados para expresar. Queremos transmitir en cada producto la creatividad, excelencia, humor y ternura que también caracteriza a nuestro país.",
+    imgCard: "latteperson3.png",
+    alt: "personaje latte con diferentes vestimentas y expresiones"
+  },
+  {
+    CardTitle: "Creamos las frases en comunidad",
+    subCard: "No solo buscamos innovar en las frases y estar en la tendencia, sino que también hacemos parte a nuestra comunidad en la creación de nuevas frases a través de las redes sociales.",
+    imgCard: "latteperson4.png",
+    alt: "personaje latte con diferentes vestimentas y expresiones"
+  },
+  {
+    CardTitle: "Envíos rápidos y seguros",
+    subCard: "Garantizamos envíos seguros con seguimiento para que tu pedido llegue sin inconvenientes. Información proporcionada por Correo Argentino.",
+    imgCard: "latteperson1.png",
+    alt: "personaje latte con diferentes vestimentas y expresiones"
+  }
+];
 
 const $$Astro$1 = createAstro();
 const $$BeneficiosLatte = createComponent(($$result, $$props, $$slots) => {
