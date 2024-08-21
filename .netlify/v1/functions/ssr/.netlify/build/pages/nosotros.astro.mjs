@@ -57,7 +57,7 @@ const $$LeftSection = createComponent(($$result, $$props, $$slots) => {
     img,
     alt
   } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="flex flex-col md:flex-row md:justify-center w-full mb-[80px]"> <div class="mask mask-squircle order-2 sm:order-2 mt-5 md:w-2/4"> <img${addAttribute(img, "src")}${addAttribute(alt, "alt")}> </div> <div class="order-1 sm:order-1 px-4 flex-grow self-center"> <h2 class="text-start mb-4 text-balance text-4xl font-extrabold tracking-tight">${title}</h2> <p class="mt-4 text-pretty text-lg leading-relaxed lg:w-4/5">${subTitle}</p> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="flex flex-col md:flex-row md:justify-center w-full mb-[80px]"> <div class="mask mask-squircle order-2 sm:order-1 mt-5 md:w-2/4"> <img${addAttribute(img, "src")}${addAttribute(alt, "alt")}> </div> <div class="order-1 sm:order-2 px-4 flex-grow self-center"> <h2 class="text-start mb-4 text-balance text-4xl font-extrabold tracking-tight">${title}</h2> <p class="mt-4 text-pretty text-lg leading-relaxed lg:w-4/5">${subTitle}</p> </div> </section>`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/sections/nosotros/LeftSection.astro", void 0);
 
 const $$Astro = createAstro();
