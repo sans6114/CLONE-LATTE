@@ -14,7 +14,7 @@ const $$Swiper = createComponent(($$result, $$props, $$slots) => {
   Astro2.self = $$Swiper;
   const { images } = Astro2.props;
   const imagesForSlide = images.map((image) => {
-    return image.startsWith("http") ? image : `${"http://localhost:4321"}/src/images/fabrica/${image}`;
+    return image.startsWith("http") ? image : `/fabrica/${image}`;
   });
   return renderTemplate`<!-- Slider main container -->${maybeRenderHead()}<div class="swiper mt-10 col-span-1 sm:col-span-2" data-astro-cid-qfh3srwg> <!-- Additional required wrapper --> <div class="swiper-wrapper" data-astro-cid-qfh3srwg> <!-- Slides --> ${imagesForSlide.map((img) => renderTemplate`<div class="swiper-slide" data-astro-cid-qfh3srwg> <img${addAttribute(img, "src")} alt="Product Image" class="w-full h-full object-cover" data-astro-cid-qfh3srwg> </div>`)} </div> <!-- If we need pagination --> <div class="swiper-pagination" data-astro-cid-qfh3srwg></div> </div>  `;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/components/sections/nosotros/Swiper.astro", void 0);
