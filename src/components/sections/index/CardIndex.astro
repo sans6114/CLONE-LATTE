@@ -12,7 +12,7 @@ interface Props {
 const formatter = (imagen: string) => {
     return imagen.startsWith("http")
       ? imagen
-      : `${import.meta.env.WEBSITE_URL}/src/images/index/${imagen}`;
+      : `/index/${imagen}`;
   };
   
 const {card} = Astro.props

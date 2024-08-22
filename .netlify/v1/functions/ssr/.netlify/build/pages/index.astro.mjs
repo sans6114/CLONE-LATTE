@@ -181,7 +181,7 @@ const $$CardIndex = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$CardIndex;
   const formatter = (imagen) => {
-    return imagen.startsWith("http") ? imagen : `${"http://localhost:4321"}/src/images/index/${imagen}`;
+    return imagen.startsWith("http") ? imagen : `/index/${imagen}`;
   };
   const { card } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<div class="h-[200px] md:h-auto card bg-violet-500  shadow-xl focus-visible:scale-125 md:hover:scale-125 hover:z-40 transition-all duration-500 md:duration-300 ease-in-out rounded-3xl"> <figure> <img${addAttribute(formatter(card.imgCard), "src")}${addAttribute(card.alt, "alt")} class="h-full md:h-96 w-full object-cover object-center rounded-3xl"${addAttribute("false", "draggable")}${addAttribute("eager", "loading")}> </figure> <div class="card-body absolute inset-0 flex flex-col justify-center items-center bg-opacity-50 bg-violet-500 text-center text-white opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 rounded-3xl"> <h2 class="card-title font-extrabold">${card.CardTitle}</h2> </div> </div>`;

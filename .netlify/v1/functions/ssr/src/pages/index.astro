@@ -16,8 +16,6 @@ import alfajorImage from "@/images/index/alfajorImage.png";
 import Divider from "@/components/ui/utils/Divider.astro";
 import TimeLine from "@/components/sections/index/TimeLine.astro";
 import HeroSectionAlt from "@/components/ui/banner/HeroSectionAlt.astro";
-
-
 ---
 
 <MainLayout title="Inicio | Latte chocolate">
@@ -49,7 +47,11 @@ import HeroSectionAlt from "@/components/ui/banner/HeroSectionAlt.astro";
     alt="Imagen de mockup de cajas de chocolates latte"
   />
   <Divider />
-  <Caracteristicas title="Una frase para cada momento" subTitle="En Latte, respondemos a una necesidad única en el sector de los chocolates y dulces, creando momentos únicos." caracteristicas={caracteristicas}/>
+  <Caracteristicas
+    title="Una frase para cada momento"
+    subTitle="En Latte, respondemos a una necesidad única en el sector de los chocolates y dulces, creando momentos únicos."
+    caracteristicas={caracteristicas}
+  />
   <CategoriasLatte
     title="Nuestro segmento de categorías"
     subtitle="Si queres adquirir este tipo de segmentos enteros entra al protal comercio y crea o accede a tu cuenta."
@@ -63,12 +65,19 @@ import HeroSectionAlt from "@/components/ui/banner/HeroSectionAlt.astro";
     title="Las mejores devoluciones del publico"
     subtitle="Nuestro producto es muy bien recibido por cada uno de nuestra red de revendedores, es un producto que realmente conviene."
   />
-<TimeLine title="Un poco sobre nosotros"/>
-<Divider />
-<Caracteristicas title="Preguntas frecuentes" subTitle="En Latte, respondemos a una necesidad única en el sector de los chocolates y dulces, creando momentos únicos." caracteristicas={preguntasFrecuentes}/>
-<Redes src={redes} alt="Imagen mockup sobre las redes sociales de latte chocolate"/>
+  <TimeLine title="Un poco sobre nosotros" />
+  <Divider />
+  <Caracteristicas
+    title="Preguntas frecuentes"
+    subTitle="En Latte, respondemos a una necesidad única en el sector de los chocolates y dulces, creando momentos únicos."
+    caracteristicas={preguntasFrecuentes}
+  />
+  <Redes
+    src={redes}
+    alt="Imagen mockup sobre las redes sociales de latte chocolate"
+  />
 
-<HeroSectionAlt
+  <HeroSectionAlt
     title="¡No dudes más! comenzá a vender Latte en tu comercio"
     subTitle="Registrate para tener descuentos y vender un producto super original"
     url="./contact.astro"
