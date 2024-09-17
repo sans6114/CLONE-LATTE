@@ -6,6 +6,22 @@ import { menuData } from "@/data/MenuData";
 import { firebase } from "@/firebase/config";
 
 const user = firebase.auth.currentUser;
+
+
+// const routes = menuData.map((linkData) => {
+//   const userRouter = []
+//   const normalRoutes = []
+//   if(user){
+//     linkData.isUserRoute ? userRouter.push(linkData) : null
+//   } else {
+//     linkData.isUserRoute ? null : normalRoutes.push(linkData)
+//   }
+// })
+
+const userRoutes = menuData.filter(linkData => linkData.isUserRoute)
+const defaultRoutes = menuData.filter(linkData => !linkData.isUserRoute)
+
+const routes = user ? userRoutes : defaultRoutes
 ---
 
 <header
@@ -24,7 +40,7 @@ const user = firebase.auth.currentUser;
       >
         <li class="text-center">
           {
-            menuData.map(({ link, content }) => (
+            routes.map(({ link, content }) => (
               <div class="btn btn-primary btn-outline my-2">
                 <a
                   href={link}
@@ -41,10 +57,10 @@ const user = firebase.auth.currentUser;
     </div>
   </div>
   <div class="navbar-center"></div>
-  <div class="navbar-end flex gap-2">
+  <div class="navbar-end flex mx-4">
     <SelectThemeChange />
 
-    {
+    <!-- {
       user ? (
         <button class="btn btn-circle w-auto px-2" id="logOut">
           <LatteAnteojos />
@@ -59,7 +75,7 @@ const user = firebase.auth.currentUser;
           Comercios
         </a>
       )
-    }
+    } -->
   </div>
 </header>
 

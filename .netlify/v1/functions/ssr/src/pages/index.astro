@@ -8,13 +8,14 @@ import AnnounceBanner from "@/components/ui/banner/AnnounceBanner.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@/components/sections/index/HeroSection.astro";
 import BeneficiosLatte from "@/components/sections/index/BeneficiosLatte.astro";
-import heroImage from "@/images/index/hero-image.avif";
+import mockupDos from "@/images/index/mockup2.png";
 import redes from "@/images/index/mockupredes.png";
 import { caracteristicas } from "@/data/Accordions";
 import { preguntasFrecuentes } from "@/data/Accordions";
 import alfajorImage from "@/images/index/alfajorImage.png";
 import Divider from "@/components/ui/utils/Divider.astro";
 import TimeLine from "@/components/sections/index/TimeLine.astro";
+import presentationImg from '@/images/index/presentation1.png'
 import HeroSectionAlt from "@/components/ui/banner/HeroSectionAlt.astro";
 ---
 
@@ -32,7 +33,7 @@ import HeroSectionAlt from "@/components/ui/banner/HeroSectionAlt.astro";
     subTitle="Diseñados para expresar tus sentimientos de la manera mas original."
     primaryBtn="Ver productos"
     primaryBtnURL="/productos"
-    src={heroImage}
+    src={presentationImg}
     alt="Variedad de chocolates personalizados de Latte Chocolate"
   />
   <Divider />
@@ -41,16 +42,16 @@ import HeroSectionAlt from "@/components/ui/banner/HeroSectionAlt.astro";
     subTitle="Un producto revelador que"
   />
   <Divider />
-  <BeneficiosLatte
-    title="¿Por qué destacamos?"
-    src={heroImage}
-    alt="Imagen de mockup de cajas de chocolates latte"
-  />
-  <Divider />
   <Caracteristicas
     title="Una frase para cada momento"
     subTitle="En Latte, respondemos a una necesidad única en el sector de los chocolates y dulces, creando momentos únicos."
     caracteristicas={caracteristicas}
+  />
+  <Divider />
+  <BeneficiosLatte
+    title="¿Por qué destacamos?"
+    src={mockupDos}
+    alt="Imagen de mockup de cajas de chocolates latte"
   />
   <CategoriasLatte
     title="Nuestro segmento de categorías"
@@ -65,8 +66,6 @@ import HeroSectionAlt from "@/components/ui/banner/HeroSectionAlt.astro";
     title="Las mejores devoluciones del publico"
     subtitle="Nuestro producto es muy bien recibido por cada uno de nuestra red de revendedores, es un producto que realmente conviene."
   />
-  <TimeLine title="Un poco sobre nosotros" />
-  <Divider />
   <Caracteristicas
     title="Preguntas frecuentes"
     subTitle="En Latte, respondemos a una necesidad única en el sector de los chocolates y dulces, creando momentos únicos."

@@ -1,0 +1,215 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import type {Categoria} from '@/interfaces/categoriasInterface'
+import { getCollection } from 'astro:content';
+export const prerender = true; 
+import PrimaryBtn from '@/components/ui/buttons/PrimaryBtn.astro'
+declare global {
+  interface Window {
+    gsap: any;
+  }
+}
+// This gets the static paths for all the unique products
+export async function getStaticPaths() {
+  const categoriasEntries = await getCollection("categorias");
+  return categoriasEntries.map((categoria) => ({
+    params: { slug: categoria.data.slug },
+    props: { categoria },
+  }));
+}
+
+const { categoria } = Astro.props;
+console.log(categoria)
+
+---
+<MainLayout title="hola | Latte chocolate">
+  <div id="overlay" class="fixed inset-0 ">
+  </div>
+
+  <section
+    class="mx-auto flex max-w-[85rem] flex-col px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full mt-[60px]"
+  >
+    <div>
+      <p
+        id="fadeText"
+        class="mb-8 max-w-prose text-pretty font-light  sm:text-xl"
+      >
+        {categoria.data.description}
+      </p>
+    </div>
+    <div
+      class="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
+    >
+      <div id="fadeInUp">
+        <h1
+          class="block text-4xl font-bold tracking-tighter  sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          {categoria.data.title}
+        </h1>
+      </div>
+      <div>
+        <img id="fadeInMoveRight" class="w-1/2 mx-auto" src={categoria?.data.image} alt="hola">
+      </div>
+    </div>
+
+    <section class="mt-[200px]">
+      <div>
+        <!-- Each h1 and p tag renders a portion of the title and subTitle defined above -->
+        <h1
+          class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight"
+        >
+      hola title
+        </h1>
+        
+        <p
+          class="mt-3 text-pretty text-lg leading-relaxed  lg:w-4/5"
+        >
+          hola
+        </p>
+      
+      <div class="mt-8">
+    
+        <PrimaryBtn title='hola' url='#' noArrow={false}/>
+      </div>
+      </div>
+    </section>
+</MainLayout>
+<script>
+  import { gsap } from "gsap";
+
+  type AnimationSettings = {
+    autoAlpha?: number;
+    y?: number;
+    x?: number;
+    willChange?: string;
+  };
+
+  function setElementAnimationDefaults(
+    id: string,
+    settings: AnimationSettings
+  ) {
+    gsap.set(id, settings);
+  }
+
+  setElementAnimationDefaults("#fadeText", {
+    autoAlpha: 0,
+    y: 50,
+    willChange: "transform, opacity",
+  });
+
+  setElementAnimationDefaults("#fadeInUp", {
+    autoAlpha: 0,
+    y: 50,
+    willChange: "transform, opacity",
+  });
+
+  setElementAnimationDefaults("#fadeInMoveRight", {
+    autoAlpha: 0,
+    x: 300,
+    willChange: "transform, opacity",
+  });
+
+  let timeline = gsap.timeline({ defaults: { overwrite: "auto" } });
+
+  timeline.to("#fadeText", {
+    duration: 1.5,
+    autoAlpha: 1,
+    y: 0,
+    delay: 1,
+    ease: "power2.out",
+  });
+
+  timeline.to(
+    "#fadeInUp",
+    { duration: 1.5, autoAlpha: 1, y: 0, ease: "power2.out" },
+    "-=1.2"
+  );
+
+  timeline.to(
+    "#fadeInMoveRight",
+    { duration: 1.5, autoAlpha: 1, x: 0, ease: "power2.inOut" },
+    "-=1.4"
+  );
+
+  timeline.to("#overlay", { duration: 1, autoAlpha: 0, delay: 0.2 });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function setButtonInactive(btn: any, activeButton: any) {
+      if (btn !== activeButton) {
+        btn.classList.remove(
+          "active",
+          "bg-neutral-100",
+          "hover:border-transparent",
+          "dark:bg-white/[.05]"
+        );
+
+        const tabId = btn.getAttribute("data-target");
+        if (tabId) {
+          const contentElement = document.querySelector(tabId);
+          if (contentElement) {
+            contentElement.classList.add("hidden");
+          }
+        }
+
+        changeHeadingStyle(
+          btn,
+          ["text-neutral-800", "dark:text-neutral-200"],
+          ["text-primary-400", "dark:text-primary-300"]
+        );
+      }
+    }
+
+    function activateButton(button: any) {
+      button.classList.add(
+        "active",
+        "bg-neutral-100",
+        ",hover:border-transparent",
+        "dark:bg-white/[.05]"
+      );
+
+      const tabId = button.getAttribute("data-target");
+      if (tabId) {
+        const contentElementToShow = document.querySelector(tabId);
+        if (contentElementToShow) {
+          contentElementToShow.classList.remove("hidden");
+        }
+      }
+
+      changeHeadingStyle(
+        button,
+        ["text-primary-400", "dark:text-primary-300"],
+        ["text-neutral-800", "dark:text-neutral-200"]
+      );
+    }
+
+    function changeHeadingStyle(
+      button: any,
+      addClasses: any,
+      removeClasses: any
+    ) {
+      let heading = button.querySelector("span");
+      if (heading) {
+        heading.classList.remove(...removeClasses);
+        heading.classList.add(...addClasses);
+      }
+    }
+
+    const tabButtons = document.querySelectorAll("[data-target]");
+
+    if (tabButtons.length > 0) {
+      changeHeadingStyle(
+        tabButtons[0],
+        ["text-primary-400", "dark:text-primary-300"],
+        []
+      );
+    }
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        tabButtons.forEach((btn) => setButtonInactive(btn, button));
+        activateButton(button);
+      });
+    });
+  });
+</script>

@@ -2,7 +2,12 @@
 import CategoryDivider from './CategoryDivider.astro'
 import Categorias from '@/data/Categories'
 import { Image } from "astro:assets";
+import { getCollection } from 'astro:content';
+import CardSmall from '@/components/ui/utils/CardSmall.astro';
+import CardWide from '@/components/ui/utils/CardWide.astro';
+import Divider from '@/components/ui/utils/Divider.astro';
 
+const categorias = await getCollection("categorias");
 interface Props {
   title : string,
   subtitle: string,
@@ -16,11 +21,23 @@ const {title, subtitle, img2, alt2} = Astro.props
 ---
 
 <section class="flex flex-col my-[150px] items-center">
-    <div class="flex flex-col md:px-10 items-center gap-y-5 mb-10 text-center">
+    <div class="flex flex-col md:px-10 items-center gap-y-5 mb-[100px] text-center">
         <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">{title}</h1>
         <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">{subtitle}</p>
       </div>
-{
+      <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 w-full">
+        {
+          categorias.map((categoria) =>
+            categoria.data.wide ? (
+              <CardSmall categoria={categoria} />
+            ) : (
+              <CardWide categoria={categoria} />
+            )
+          )
+        }
+      </section>
+      <Divider />
+<!-- {
 Categorias.map((data) => (
 
 
@@ -28,7 +45,9 @@ Categorias.map((data) => (
 <div class="border border-violet-500 w-3/5 mx-auto my-[100px]">
 </div>
 ))
-}
+} -->
+
+
 <div class="flex flex-col">
   <div class="flex flex-col md:px-10 items-center gap-y-5 text-center">
     <h2 class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-6xl lg:leading-tight ">Alfajor de la fortuna</h2>

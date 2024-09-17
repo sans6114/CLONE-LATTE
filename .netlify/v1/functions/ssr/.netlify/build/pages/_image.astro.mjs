@@ -1,7 +1,7 @@
-import { g as getConfiguredImageService, i as imageConfig } from '../chunks/_astro_assets_BJAJeRUX.mjs';
+import { g as getConfiguredImageService, i as imageConfig } from '../chunks/_astro_assets_BqaCaw9f.mjs';
 import { isRemotePath } from '@astrojs/internal-helpers/path';
 import * as mime from 'mrmime';
-import { i as isRemoteAllowed } from '../chunks/astro/assets-service_Dxu6xfIt.mjs';
+import { i as isRemoteAllowed } from '../chunks/astro/assets-service_abgooGpH.mjs';
 export { renderers } from '../renderers.mjs';
 
 const fnv1a52 = (str) => {
