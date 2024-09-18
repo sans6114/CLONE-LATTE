@@ -178,7 +178,7 @@ function isPropagatedAssetsModule(module) {
 
 const contentDir = '/src/content/';
 
-const contentEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/categorias/amistad.md": () => import('./amistad_CAtMPdp_.mjs'),"/src/content/categorias/amor.md": () => import('./amor_BcsUxXod.mjs'),"/src/content/categorias/cumpleaños.md": () => import('./cumpleaños_xd2UyGvU.mjs'),"/src/content/categorias/dieteticas.md": () => import('./dieteticas__PNw_dU4.mjs'),"/src/content/categorias/festividades.md": () => import('./festividades_BY97APLY.mjs'),"/src/content/categorias/futbol.md": () => import('./futbol_UHZgaJct.mjs'),"/src/content/categorias/música.md": () => import('./música_DgIbUi6s.mjs'),"/src/content/categorias/vinotecas.md": () => import('./vinotecas_CJ59Qcm7.mjs')});
+const contentEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/categorias/amistad.md": () => import('./amistad_C2uvLBx1.mjs'),"/src/content/categorias/amor.md": () => import('./amor_BcsUxXod.mjs'),"/src/content/categorias/cumpleaños.md": () => import('./cumpleaños_xd2UyGvU.mjs'),"/src/content/categorias/dieteticas.md": () => import('./dieteticas__PNw_dU4.mjs'),"/src/content/categorias/festividades.md": () => import('./festividades_BY97APLY.mjs'),"/src/content/categorias/futbol.md": () => import('./futbol_UHZgaJct.mjs'),"/src/content/categorias/música.md": () => import('./música_DgIbUi6s.mjs'),"/src/content/categorias/vinotecas.md": () => import('./vinotecas_CJ59Qcm7.mjs')});
 const contentCollectionToEntryMap = createCollectionToGlobResultMap({
 	globResult: contentEntryGlob,
 	contentDir,
@@ -195,7 +195,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"categorias":{"type":"content","entries":{"latte-amistad":"/src/content/categorias/amistad.md","latte-amor":"/src/content/categorias/amor.md","latte-dietetica":"/src/content/categorias/dieteticas.md","latte-cumpleanos":"/src/content/categorias/cumpleaños.md","latte-festividades":"/src/content/categorias/festividades.md","latte-futbol":"/src/content/categorias/futbol.md","latte-música":"/src/content/categorias/música.md","latte-vinotecas":"/src/content/categorias/vinotecas.md"}}};
+lookupMap = {"categorias":{"type":"content","entries":{"latte-amistad":"/src/content/categorias/amistad.md","latte-cumpleanos":"/src/content/categorias/cumpleaños.md","latte-amor":"/src/content/categorias/amor.md","latte-dietetica":"/src/content/categorias/dieteticas.md","latte-festividades":"/src/content/categorias/festividades.md","latte-futbol":"/src/content/categorias/futbol.md","latte-música":"/src/content/categorias/música.md","latte-vinotecas":"/src/content/categorias/vinotecas.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {
@@ -206,7 +206,7 @@ function createGlobLookup(glob) {
 	};
 }
 
-const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/categorias/amistad.md": () => import('./amistad_BvoMnNZK.mjs'),"/src/content/categorias/amor.md": () => import('./amor_DWtUWhwl.mjs'),"/src/content/categorias/cumpleaños.md": () => import('./cumpleaños__7nm1Geb.mjs'),"/src/content/categorias/dieteticas.md": () => import('./dieteticas_CXhbLl5R.mjs'),"/src/content/categorias/festividades.md": () => import('./festividades_d_K7UUqu.mjs'),"/src/content/categorias/futbol.md": () => import('./futbol_Bf2f4PiJ.mjs'),"/src/content/categorias/música.md": () => import('./música_CaaO4b38.mjs'),"/src/content/categorias/vinotecas.md": () => import('./vinotecas_DmZw6KCk.mjs')});
+const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/categorias/amistad.md": () => import('./amistad_CVTqIPey.mjs'),"/src/content/categorias/amor.md": () => import('./amor_DWtUWhwl.mjs'),"/src/content/categorias/cumpleaños.md": () => import('./cumpleaños__7nm1Geb.mjs'),"/src/content/categorias/dieteticas.md": () => import('./dieteticas_CXhbLl5R.mjs'),"/src/content/categorias/festividades.md": () => import('./festividades_d_K7UUqu.mjs'),"/src/content/categorias/futbol.md": () => import('./futbol_Bf2f4PiJ.mjs'),"/src/content/categorias/música.md": () => import('./música_CaaO4b38.mjs'),"/src/content/categorias/vinotecas.md": () => import('./vinotecas_DmZw6KCk.mjs')});
 const collectionToRenderEntryMap = createCollectionToGlobResultMap({
 	globResult: renderEntryGlob,
 	contentDir,

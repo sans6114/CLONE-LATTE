@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./amistad_DLvxAP88.mjs');
+						return import('./amistad_D0km5N3a.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

@@ -10,7 +10,7 @@ import Divider from "@/components/ui/utils/Divider.astro";
 const formatter = (image: string) => {
   return image.startsWith("http")
     ? image
-    : `${import.meta.env.WEBSITE_URL}/src/images/fabrica/${image}`;
+    : `/fabrica/${image}`;
 };
 ---
 

@@ -4,7 +4,7 @@ import 'clsx';
 
 const html = "";
 
-				const frontmatter = {"wide":true,"title":"Latte Amistad","description":"Categoría para celebrar la amistad con detalles únicos y creativos.","slug":"latte-amistad","price":1300,"urlTB":"https://tubodegaonline.com/latte-amistad","image":"/imgCategories/estucheAmistad.png"};
+				const frontmatter = {"wide":true,"title":"Latte Amistad","description":"Categoría para celebrar la amistad con detalles únicos y creativos.","slug":"latte-amistad","price":1300,"urlTB":"https://www.lattechocolate.com.ar/productos/pack-chocolates-tematica-amistad/","image":"/imgCategories/estucheAmistad.png"};
 				const file = "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/content/categorias/amistad.md";
 				const url = undefined;
 				function rawContent() {

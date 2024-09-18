@@ -93,14 +93,15 @@ const articles = [
 
 const $$Nosotros = createComponent(($$result, $$props, $$slots) => {
   const formatter = (image) => {
-    return image.startsWith("http") ? image : `${"http://localhost:4321"}/src/images/fabrica/${image}`;
+    return image.startsWith("http") ? image : `/fabrica/${image}`;
   };
-  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "Nosotros | Latte chocolate" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "HeroNosotros", $$HeroNosotros, { "title": "Conocenos un poco más", "subTitle": "Nuestra historia y valores hacen de Latte un negocio único. Ya sea comprando un chocolate para un ser querido o revendiendo nuestros productos, eres parte esencial de nuestra visión y misión." })} ${articles.map((article) => {
+  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "Nosotros | Latte chocolate" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "HeroNosotros", $$HeroNosotros, { "title": "Conocenos un poco m\xE1s", "subTitle": "Nuestra historia y valores hacen de Latte un negocio \xFAnico. Ya sea comprando un chocolate para un ser querido o revendiendo nuestros productos, eres parte esencial de nuestra visi\xF3n y misi\xF3n." })} ${articles.map((article) => {
     return article.isRight ? renderTemplate`${renderComponent($$result2, "RightSection", $$RightSection, { "title": article.title, "subTitle": article.subTitle, "img": formatter(article.img), "alt": article.alt })}
         ${renderComponent($$result2, "Divider", $$Divider, {})}` : renderTemplate`${renderComponent($$result2, "LeftSection", $$LeftSection, { "title": article.title, "subTitle": article.subTitle, "img": formatter(article.img), "alt": article.alt })}
         ${renderComponent($$result2, "Divider", $$Divider, {})}`;
-  })} ${renderComponent($$result2, "HeroSectionAlt", $$HeroSectionAlt, { "title": "No dudes más", "subTitle": "Unite a nuestra red de revendedores y disfruta de múltiples beneficios", "url": "./contact.astro" })} ` })}`;
+  })} ${renderComponent($$result2, "HeroSectionAlt", $$HeroSectionAlt, { "title": "No dudes m\xE1s", "subTitle": "Unite a nuestra red de revendedores y disfruta de m\xFAltiples beneficios", "url": "./contact.astro" })} ` })}`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/pages/nosotros.astro", void 0);
+
 const $$file = "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/pages/nosotros.astro";
 const $$url = "/nosotros";
 
