@@ -99,7 +99,7 @@ const $$Nosotros = createComponent(($$result, $$props, $$slots) => {
     return article.isRight ? renderTemplate`${renderComponent($$result2, "RightSection", $$RightSection, { "title": article.title, "subTitle": article.subTitle, "img": formatter(article.img), "alt": article.alt })}
         ${renderComponent($$result2, "Divider", $$Divider, {})}` : renderTemplate`${renderComponent($$result2, "LeftSection", $$LeftSection, { "title": article.title, "subTitle": article.subTitle, "img": formatter(article.img), "alt": article.alt })}
         ${renderComponent($$result2, "Divider", $$Divider, {})}`;
-  })} ${renderComponent($$result2, "HeroSectionAlt", $$HeroSectionAlt, { "title": "No dudes m\xE1s", "subTitle": "Unite a nuestra red de revendedores y disfruta de m\xFAltiples beneficios", "url": "./contact.astro" })} ` })}`;
+  })} ${renderComponent($$result2, "HeroSectionAlt", $$HeroSectionAlt, { "title": "No dudes m\xE1s", "subTitle": "Unite a nuestra red de revendedores y disfruta de m\xFAltiples beneficios", "url": "https://api.whatsapp.com/send?phone=542216019722&text=hola!%20mi%20nombre%20es..." })} ` })}`;
 }, "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/pages/nosotros.astro", void 0);
 
 const $$file = "C:/Users/PC/Desktop/LATTE-NETLIFY/astro-auth/src/pages/nosotros.astro";

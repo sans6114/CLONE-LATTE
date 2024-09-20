@@ -6,7 +6,7 @@ import { m as mockupDos, $ as $$CardSmall, a as $$CardWide } from '../chunks/moc
 import '@astrojs/internal-helpers/path';
 import { $ as $$Image } from '../chunks/_astro_assets_BqaCaw9f.mjs';
 import 'clsx';
-import { g as getCollection, $ as $$PrimaryBtn } from '../chunks/_astro_content_CRM31Z2P.mjs';
+import { g as getCollection, $ as $$PrimaryBtn } from '../chunks/_astro_content_2ZnSEWxn.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro$1 = createAstro();
